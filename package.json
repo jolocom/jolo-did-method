@@ -2,7 +2,11 @@
   "name": "RegistryContract",
   "version": "0.0.1",
   "description": "Basic contract for registering DID / DDO mappings - Status: WIP - Version: 0.1",
+  "main": "js/ethereumResolver.js",
+  "typings": "js/ethereumResolver",
   "scripts": {
+    "prepare": "./node_modules/.bin/tsc -p ./ts",
+    "prepublish": "yarn run prepare",
     "test": "yarn run deploy && mocha tests/*.test.ts -r ts-node/register",
     "deploy": "truffle deploy --reset",
     "testrpc": "testrpc --account='0xa2985156e3da3046101ae2b26093f647fed9d6ce31ffeb4d975d143ac69e5b46,1000000000000000000000001' --account='0x217bd5bc9087a7349c771bc78da459bf2862c804eabbf3b54f16193c67f9a95d,5000000000000000000000001'"
@@ -16,6 +20,7 @@
     "web3": "^1.0.0-beta.29"
   },
   "devDependencies": {
+    "@types/node": "^9.4.0",
     "ethereumjs-testrpc": "^6.0.3",
     "truffle": "^4.0.5"
   }

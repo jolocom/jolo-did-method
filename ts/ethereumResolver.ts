@@ -1,11 +1,16 @@
-import * as Web3 from 'web3'
-import * as RegistryContract from '../build/contracts/Registry.json'
+const RegistryContract = require('../build/contracts/Registry.json')
+const Web3 = require('web3')
 
 export default class EthereumResolver{
+  private web3: any
+  private indexContract: any
+
   constructor() {
     const address = '0xc4b48901af7891d83ce83877e1f8fb4c81a94907'
 
-    this.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
+    const provider =  new Web3.providers.HttpProvider('http://localhost:8545')
+    this.web3 = new Web3(provider)
+
     this.indexContract = new this.web3.eth.Contract(RegistryContract.abi, address)
   }
   
