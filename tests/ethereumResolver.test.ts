@@ -10,7 +10,9 @@ const expect = chai.expect
 
 
 describe('Ethereum Resolver', () => {
-  const ethResolver = new EthereumResolver()
+  const rpcEndpoint = 'http://localhost:8545'
+
+  const ethResolver = new EthereumResolver(testData.contrAddr, rpcEndpoint)
   it('Should correctly register a user\'s DDO hash', async () => {
     const hash = await ethResolver.updateDIDRecord(
       testData.firstTestAccount, testData.testUserDID,

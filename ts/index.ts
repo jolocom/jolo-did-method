@@ -5,10 +5,8 @@ export default class EthereumResolver{
   private web3: any
   private indexContract: any
 
-  constructor() {
-    const address = '0xc4b48901af7891d83ce83877e1f8fb4c81a94907'
-
-    const provider =  new Web3.providers.HttpProvider('http://localhost:8545')
+  constructor(address: string, providerUri: string) {
+    const provider =  new Web3.providers.HttpProvider(providerUri)
     this.web3 = new Web3(provider)
 
     this.indexContract = new this.web3.eth.Contract(RegistryContract.abi, address)
