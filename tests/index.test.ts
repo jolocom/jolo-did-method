@@ -3,7 +3,7 @@ import * as chaiAsPromised from 'chai-as-promised'
 
 import testData from './data/testData'
 
-import EthereumResolver from '../ts/ethereumResolver'
+import EthereumResolver from '../ts/index'
 
 chai.use(chaiAsPromised)
 const expect = chai.expect
