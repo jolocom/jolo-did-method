@@ -7,6 +7,7 @@ const Web3 = require('web3')
 export default class EthereumResolver{
   private web3: any
   private indexContract: any
+  private contractAddress: string
 
   constructor(address: string, providerUri: string) {
     const provider =  new Web3.providers.HttpProvider(providerUri)
