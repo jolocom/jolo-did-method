@@ -13,7 +13,7 @@
       "outputs": [
         {
           "name": "",
-          "type": "bytes32"
+          "type": "string"
         }
       ],
       "payable": false,
@@ -29,7 +29,7 @@
         },
         {
           "name": "_newHash",
-          "type": "bytes32"
+          "type": "string"
         }
       ],
       "name": "setRecord",
@@ -56,25 +56,25 @@
         {
           "indexed": false,
           "name": "_ddoHash",
-          "type": "bytes32"
+          "type": "string"
         }
       ],
       "name": "registrationSuccess",
       "type": "event"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b33600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102d58061005f6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd14610051578063db33c2d614610094575b600080fd5b341561005c57600080fd5b6100766004808035600019169060200190919050506100c8565b60405180826000191660001916815260200191505060405180910390f35b341561009f57600080fd5b6100c6600480803560001916906020019091908035600019169060200190919050506100ef565b005b60008060008360001916600019168152602001908152602001600020600101549050919050565b6000600102600080846000191660001916815260200190815260200160002060010154600019161415801561018d57503373ffffffffffffffffffffffffffffffffffffffff16600080846000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156101c3577f14c09d8616ea1bcf6a48491cd80dc32307b962aa8b0675a20c28067a6c68fd6460405160405180910390a1600080fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff1681526020018260001916815250600080846000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550602082015181600101906000191690559050507f098926cd0d351634b2e00a7a8b99f08e263bb23aa7b373f09a7b9694a04d791b8160405180826000191660001916815260200191505060405180910390a150505600a165627a7a72305820b4ad35c002370092001b0a3f3da66ecc70f8dff9ff534e24391a636db682688c0029",
-  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd14610051578063db33c2d614610094575b600080fd5b341561005c57600080fd5b6100766004808035600019169060200190919050506100c8565b60405180826000191660001916815260200191505060405180910390f35b341561009f57600080fd5b6100c6600480803560001916906020019091908035600019169060200190919050506100ef565b005b60008060008360001916600019168152602001908152602001600020600101549050919050565b6000600102600080846000191660001916815260200190815260200160002060010154600019161415801561018d57503373ffffffffffffffffffffffffffffffffffffffff16600080846000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156101c3577f14c09d8616ea1bcf6a48491cd80dc32307b962aa8b0675a20c28067a6c68fd6460405160405180910390a1600080fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff1681526020018260001916815250600080846000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550602082015181600101906000191690559050507f098926cd0d351634b2e00a7a8b99f08e263bb23aa7b373f09a7b9694a04d791b8160405180826000191660001916815260200191505060405180910390a150505600a165627a7a72305820b4ad35c002370092001b0a3f3da66ecc70f8dff9ff534e24391a636db682688c0029",
-  "sourceMap": "26:793:1:-;;;309:62;;;;;;;;354:10;346:5;;:18;;;;;;;;;;;;;;;;;;26:793;;;;;;",
-  "deployedSourceMap": "26:793:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;707:110;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;381:315;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;707:110;761:7;787:9;:15;797:4;787:15;;;;;;;;;;;;;;;;;:23;;;780:30;;707:110;;;:::o;381:315::-;478:1;452:27;;:9;:14;462:3;452:14;;;;;;;;;;;;;;;;;:22;;;:27;;;;;:65;;;;;507:10;483:34;;:9;:14;493:3;483:14;;;;;;;;;;;;;;;;;:20;;;;;;;;;;;;:34;;;;452:65;448:139;;;533:21;;;;;;;;;;568:8;;;448:139;622:28;;;;;;;;;629:10;622:28;;;;;;641:8;622:28;;;;;;605:9;:14;615:3;605:14;;;;;;;;;;;;;;;;;:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;660:29;680:8;660:29;;;;;;;;;;;;;;;;;;;;;;;;381:315;;:::o",
-  "source": "pragma solidity ^0.4.18;\n\ncontract Registry {\n    \n    struct Record {\n        address owner;\n        bytes32 ddoHash;\n    }\n    \n    event registrationFailure();\n    event registrationSuccess(bytes32 _ddoHash);\n    \n    mapping (bytes32 => Record) private didToHash;\n    \n    address private owner;\n    \n    function Registry() public {\n        owner = msg.sender;\n    }\n    \n    function setRecord(bytes32 did, bytes32 _newHash) public {\n        if (didToHash[did].ddoHash != 0 && didToHash[did].owner != msg.sender) {\n            registrationFailure();\n            revert();\n        }\n        \n        didToHash[did] = Record(msg.sender, _newHash);\n        registrationSuccess(_newHash);\n    } \n    \n    function getRecord(bytes32 _did) public view returns (bytes32) {\n        return didToHash[_did].ddoHash;\n    }\n}\n",
+  "bytecode": "0x6060604052341561000f57600080fd5b33600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105d78061005f6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100f1575b600080fd5b341561005c57600080fd5b61007660048080356000191690602001909190505061015b565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b657808201518184015260208101905061009b565b50505050905090810190601f1680156100e35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100fc57600080fd5b61015960048080356000191690602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610220565b005b6101636104de565b60008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102145780601f106101e957610100808354040283529160200191610214565b820191906000526020600020905b8154815290600101906020018083116101f757829003601f168201915b50505050509050919050565b6102286104f2565b60008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102d95780601f106102ae576101008083540402835291602001916102d9565b820191906000526020600020905b8154815290600101906020018083116102bc57829003601f168201915b50505050509050600081511415801561035b57503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b15610391577f14c09d8616ea1bcf6a48491cd80dc32307b962aa8b0675a20c28067a6c68fd6460405160405180910390a1600080fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020820151816001019080519060200190610439929190610506565b509050507f7cb6fc773655cfc64350c81a0ae7de1aa50269780a3d35e7df09fd42994288e5826040518080602001828103825283818151815260200191508051906020019080838360005b8381101561049f578082015181840152602081019050610484565b50505050905090810190601f1680156104cc5780820380516001836020036101000a031916815260200191505b509250505060405180910390a1505050565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061054757805160ff1916838001178555610575565b82800160010185558215610575579182015b82811115610574578251825591602001919060010190610559565b5b5090506105829190610586565b5090565b6105a891905b808211156105a457600081600090555060010161058c565b5090565b905600a165627a7a723058209eca6fd26e18c89b1af3dfeea0321555cd8b03f3201a7cc612fe152eae17d0af0029",
+  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100f1575b600080fd5b341561005c57600080fd5b61007660048080356000191690602001909190505061015b565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b657808201518184015260208101905061009b565b50505050905090810190601f1680156100e35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100fc57600080fd5b61015960048080356000191690602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610220565b005b6101636104de565b60008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102145780601f106101e957610100808354040283529160200191610214565b820191906000526020600020905b8154815290600101906020018083116101f757829003601f168201915b50505050509050919050565b6102286104f2565b60008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102d95780601f106102ae576101008083540402835291602001916102d9565b820191906000526020600020905b8154815290600101906020018083116102bc57829003601f168201915b50505050509050600081511415801561035b57503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b15610391577f14c09d8616ea1bcf6a48491cd80dc32307b962aa8b0675a20c28067a6c68fd6460405160405180910390a1600080fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020820151816001019080519060200190610439929190610506565b509050507f7cb6fc773655cfc64350c81a0ae7de1aa50269780a3d35e7df09fd42994288e5826040518080602001828103825283818151815260200191508051906020019080838360005b8381101561049f578082015181840152602081019050610484565b50505050905090810190601f1680156104cc5780820380516001836020036101000a031916815260200191505b509250505060405180910390a1505050565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061054757805160ff1916838001178555610575565b82800160010185558215610575579182015b82811115610574578251825591602001919060010190610559565b5b5090506105829190610586565b5090565b6105a891905b808211156105a457600081600090555060010161058c565b5090565b905600a165627a7a723058209eca6fd26e18c89b1af3dfeea0321555cd8b03f3201a7cc612fe152eae17d0af0029",
+  "sourceMap": "26:848:0:-;;;307:62;;;;;;;;352:10;344:5;;:18;;;;;;;;;;;;;;;;;;26:848;;;;;;",
+  "deployedSourceMap": "26:848:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;763:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;379:373:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;763:109;817:6;;:::i;:::-;842:9;:15;852:4;842:15;;;;;;;;;;;;;;;;;:23;;835:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;763:109;;;:::o;379:373::-;445:22;;:::i;:::-;476:9;:14;486:3;476:14;;;;;;;;;;;;;;;;;:22;;445:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;534:1;514:9;:16;:21;;:59;;;;;563:10;539:34;;:9;:14;549:3;539:14;;;;;;;;;;;;;;;;;:20;;;;;;;;;;;;:34;;;;514:59;510:133;;;589:21;;;;;;;;;;624:8;;;510:133;678:28;;;;;;;;;685:10;678:28;;;;;;697:8;678:28;;;661:9;:14;671:3;661:14;;;;;;;;;;;;;;;;;:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;716:29;736:8;716:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;379:373:0;;;:::o;26:848::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\ncontract Registry {\n    \n    struct Record {\n        address owner;\n        string ddoHash;\n    }\n    \n    event registrationFailure();\n    event registrationSuccess(string _ddoHash);\n    \n    mapping (bytes32 => Record) private didToHash;\n    \n    address private owner;\n    \n    function Registry() public {\n        owner = msg.sender;\n    }\n    \n    function setRecord(bytes32 did, string _newHash) public {\n        bytes memory emptyTest = bytes(didToHash[did].ddoHash); \n        if (emptyTest.length != 0 && didToHash[did].owner != msg.sender) {\n            registrationFailure();\n            revert();\n        }\n        \n        didToHash[did] = Record(msg.sender, _newHash);\n        registrationSuccess(_newHash);\n    } \n    \n    function getRecord(bytes32 _did) public view returns (string) {\n        return didToHash[_did].ddoHash;\n    }\n}\n",
   "sourcePath": "/home/eugen/Documents/Work/Jolocom/registry-contract/contracts/Registry.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/home/eugen/Documents/Work/Jolocom/registry-contract/contracts/Registry.sol",
       "exportedSymbols": {
         "Registry": [
-          142
+          92
         ]
       }
     },
@@ -88,9 +88,9 @@
             ".18"
           ]
         },
-        "id": 58,
+        "id": 1,
         "name": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:0"
       },
       {
         "attributes": {
@@ -104,17 +104,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            142
+            92
           ],
           "name": "Registry",
-          "scope": 143
+          "scope": 93
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "Registry.Record",
               "name": "Record",
-              "scope": 142,
+              "scope": 92,
               "visibility": "public"
             },
             "children": [
@@ -122,7 +122,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "owner",
-                  "scope": 63,
+                  "scope": 6,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -135,45 +135,45 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 59,
+                    "id": 2,
                     "name": "ElementaryTypeName",
-                    "src": "79:7:1"
+                    "src": "79:7:0"
                   }
                 ],
-                "id": 60,
+                "id": 3,
                 "name": "VariableDeclaration",
-                "src": "79:13:1"
+                "src": "79:13:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "ddoHash",
-                  "scope": 63,
+                  "scope": 6,
                   "stateVariable": false,
                   "storageLocation": "default",
-                  "type": "bytes32",
+                  "type": "string storage pointer",
                   "value": null,
                   "visibility": "internal"
                 },
                 "children": [
                   {
                     "attributes": {
-                      "name": "bytes32",
-                      "type": "bytes32"
+                      "name": "string",
+                      "type": "string storage pointer"
                     },
-                    "id": 61,
+                    "id": 4,
                     "name": "ElementaryTypeName",
-                    "src": "102:7:1"
+                    "src": "102:6:0"
                   }
                 ],
-                "id": 62,
+                "id": 5,
                 "name": "VariableDeclaration",
-                "src": "102:15:1"
+                "src": "102:14:0"
               }
             ],
-            "id": 63,
+            "id": 6,
             "name": "StructDefinition",
-            "src": "55:69:1"
+            "src": "55:68:0"
           },
           {
             "attributes": {
@@ -188,14 +188,14 @@
                   ]
                 },
                 "children": [],
-                "id": 64,
+                "id": 7,
                 "name": "ParameterList",
-                "src": "159:2:1"
+                "src": "158:2:0"
               }
             ],
-            "id": 65,
+            "id": 8,
             "name": "EventDefinition",
-            "src": "134:28:1"
+            "src": "133:28:0"
           },
           {
             "attributes": {
@@ -210,43 +210,43 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_ddoHash",
-                      "scope": 69,
+                      "scope": 12,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "bytes32",
+                      "type": "string memory",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
+                          "name": "string",
+                          "type": "string storage pointer"
                         },
-                        "id": 66,
+                        "id": 9,
                         "name": "ElementaryTypeName",
-                        "src": "193:7:1"
+                        "src": "192:6:0"
                       }
                     ],
-                    "id": 67,
+                    "id": 10,
                     "name": "VariableDeclaration",
-                    "src": "193:16:1"
+                    "src": "192:15:0"
                   }
                 ],
-                "id": 68,
+                "id": 11,
                 "name": "ParameterList",
-                "src": "192:18:1"
+                "src": "191:17:0"
               }
             ],
-            "id": 69,
+            "id": 12,
             "name": "EventDefinition",
-            "src": "167:44:1"
+            "src": "166:43:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "didToHash",
-              "scope": 142,
+              "scope": 92,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => struct Registry.Record storage ref)",
@@ -264,36 +264,36 @@
                       "name": "bytes32",
                       "type": "bytes32"
                     },
-                    "id": 70,
+                    "id": 13,
                     "name": "ElementaryTypeName",
-                    "src": "230:7:1"
+                    "src": "228:7:0"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "Record",
-                      "referencedDeclaration": 63,
+                      "referencedDeclaration": 6,
                       "type": "struct Registry.Record storage pointer"
                     },
-                    "id": 71,
+                    "id": 14,
                     "name": "UserDefinedTypeName",
-                    "src": "241:6:1"
+                    "src": "239:6:0"
                   }
                 ],
-                "id": 72,
+                "id": 15,
                 "name": "Mapping",
-                "src": "221:27:1"
+                "src": "219:27:0"
               }
             ],
-            "id": 73,
+            "id": 16,
             "name": "VariableDeclaration",
-            "src": "221:45:1"
+            "src": "219:45:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "owner",
-              "scope": 142,
+              "scope": 92,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -306,14 +306,14 @@
                   "name": "address",
                   "type": "address"
                 },
-                "id": 74,
+                "id": 17,
                 "name": "ElementaryTypeName",
-                "src": "277:7:1"
+                "src": "275:7:0"
               }
             ],
-            "id": 75,
+            "id": 18,
             "name": "VariableDeclaration",
-            "src": "277:21:1"
+            "src": "275:21:0"
           },
           {
             "attributes": {
@@ -325,7 +325,7 @@
               ],
               "name": "Registry",
               "payable": false,
-              "scope": 142,
+              "scope": 92,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -338,9 +338,9 @@
                   ]
                 },
                 "children": [],
-                "id": 76,
+                "id": 19,
                 "name": "ParameterList",
-                "src": "326:2:1"
+                "src": "324:2:0"
               },
               {
                 "attributes": {
@@ -349,9 +349,9 @@
                   ]
                 },
                 "children": [],
-                "id": 77,
+                "id": 20,
                 "name": "ParameterList",
-                "src": "336:0:1"
+                "src": "334:0:0"
               },
               {
                 "children": [
@@ -374,13 +374,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 75,
+                              "referencedDeclaration": 18,
                               "type": "address",
                               "value": "owner"
                             },
-                            "id": 78,
+                            "id": 21,
                             "name": "Identifier",
-                            "src": "346:5:1"
+                            "src": "344:5:0"
                           },
                           {
                             "attributes": {
@@ -400,38 +400,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 154,
+                                  "referencedDeclaration": 104,
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 79,
+                                "id": 22,
                                 "name": "Identifier",
-                                "src": "354:3:1"
+                                "src": "352:3:0"
                               }
                             ],
-                            "id": 80,
+                            "id": 23,
                             "name": "MemberAccess",
-                            "src": "354:10:1"
+                            "src": "352:10:0"
                           }
                         ],
-                        "id": 81,
+                        "id": 24,
                         "name": "Assignment",
-                        "src": "346:18:1"
+                        "src": "344:18:0"
                       }
                     ],
-                    "id": 82,
+                    "id": 25,
                     "name": "ExpressionStatement",
-                    "src": "346:18:1"
+                    "src": "344:18:0"
                   }
                 ],
-                "id": 83,
+                "id": 26,
                 "name": "Block",
-                "src": "336:35:1"
+                "src": "334:35:0"
               }
             ],
-            "id": 84,
+            "id": 27,
             "name": "FunctionDefinition",
-            "src": "309:62:1"
+            "src": "307:62:0"
           },
           {
             "attributes": {
@@ -443,7 +443,7 @@
               ],
               "name": "setRecord",
               "payable": false,
-              "scope": 142,
+              "scope": 92,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -455,7 +455,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "did",
-                      "scope": 128,
+                      "scope": 78,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -468,45 +468,45 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 85,
+                        "id": 28,
                         "name": "ElementaryTypeName",
-                        "src": "400:7:1"
+                        "src": "398:7:0"
                       }
                     ],
-                    "id": 86,
+                    "id": 29,
                     "name": "VariableDeclaration",
-                    "src": "400:11:1"
+                    "src": "398:11:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_newHash",
-                      "scope": 128,
+                      "scope": 78,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "bytes32",
+                      "type": "string memory",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
+                          "name": "string",
+                          "type": "string storage pointer"
                         },
-                        "id": 87,
+                        "id": 30,
                         "name": "ElementaryTypeName",
-                        "src": "413:7:1"
+                        "src": "411:6:0"
                       }
                     ],
-                    "id": 88,
+                    "id": 31,
                     "name": "VariableDeclaration",
-                    "src": "413:16:1"
+                    "src": "411:15:0"
                   }
                 ],
-                "id": 89,
+                "id": 32,
                 "name": "ParameterList",
-                "src": "399:31:1"
+                "src": "397:30:0"
               },
               {
                 "attributes": {
@@ -515,15 +515,18 @@
                   ]
                 },
                 "children": [],
-                "id": 90,
+                "id": 33,
                 "name": "ParameterList",
-                "src": "438:0:1"
+                "src": "435:0:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "falseBody": null
+                      "falseBody": null,
+                      "assignments": [
+                        35
+                      ]
                     },
                     "children": [
                       {
@@ -538,7 +541,14 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "operator": "&&",
-                          "type": "bool"
+                          "type": "bytes memory",
+                          "constant": false,
+                          "name": "emptyTest",
+                          "scope": 78,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "value": null,
+                          "visibility": "internal"
                         },
                         "children": [
                           {
@@ -553,7 +563,8 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "operator": "!=",
-                              "type": "bool"
+                              "type": "bytes storage pointer",
+                              "name": "bytes"
                             },
                             "children": [
                               {
@@ -634,9 +645,9 @@
                                 "src": "478:1:1"
                               }
                             ],
-                            "id": 96,
-                            "name": "BinaryOperation",
-                            "src": "452:27:1"
+                            "id": 34,
+                            "name": "ElementaryTypeName",
+                            "src": "445:5:0"
                           },
                           {
                             "attributes": {
@@ -750,9 +761,9 @@
                             "src": "483:34:1"
                           }
                         ],
-                        "id": 104,
-                        "name": "BinaryOperation",
-                        "src": "452:65:1"
+                        "id": 35,
+                        "name": "VariableDeclaration",
+                        "src": "445:22:0"
                       },
                       {
                         "children": [
@@ -798,9 +809,394 @@
                                 "src": "533:21:1"
                               }
                             ],
-                            "id": 107,
+                            "id": 36,
+                            "name": "ElementaryTypeNameExpression",
+                            "src": "470:5:0",
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_storage",
+                                  "typeString": "string storage ref"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "type(bytes storage pointer)",
+                              "value": "bytes"
+                            }
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "struct Registry.Record storage ref",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 16,
+                                      "type": "mapping(bytes32 => struct Registry.Record storage ref)",
+                                      "value": "didToHash"
+                                    },
+                                    "id": 37,
+                                    "name": "Identifier",
+                                    "src": "476:9:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 29,
+                                      "type": "bytes32",
+                                      "value": "did"
+                                    },
+                                    "id": 38,
+                                    "name": "Identifier",
+                                    "src": "486:3:0"
+                                  }
+                                ],
+                                "id": 39,
+                                "name": "IndexAccess",
+                                "src": "476:14:0"
+                              }
+                            ],
+                            "id": 40,
+                            "name": "MemberAccess",
+                            "src": "476:22:0",
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "ddoHash",
+                              "referencedDeclaration": 5,
+                              "type": "string storage ref"
+                            }
+                          }
+                        ],
+                        "id": 41,
+                        "name": "FunctionCall",
+                        "src": "470:29:0",
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes storage ref",
+                          "type_conversion": true
+                        }
+                      }
+                    ],
+                    "id": 42,
+                    "name": "VariableDeclarationStatement",
+                    "src": "445:54:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "&&",
+                          "type": "bool",
+                          "commonType": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "bool",
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "operator": "!="
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": null,
+                                  "type": "uint256",
+                                  "value": "didToHash",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length"
+                                },
+                                "id": 44,
+                                "name": "MemberAccess",
+                                "src": "514:16:0",
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 35,
+                                      "type": "bytes memory",
+                                      "value": "emptyTest"
+                                    },
+                                    "id": 43,
+                                    "name": "Identifier",
+                                    "src": "514:9:0"
+                                  }
+                                ]
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 86,
+                                  "type": "int_const 0",
+                                  "value": "0",
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number"
+                                },
+                                "id": 45,
+                                "name": "Literal",
+                                "src": "534:1:0"
+                              }
+                            ],
+                            "id": 46,
+                            "name": "BinaryOperation",
+                            "src": "514:21:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "operator": "!="
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3,
+                                  "type": "address",
+                                  "value": "Record",
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "owner"
+                                },
+                                "id": 50,
+                                "name": "MemberAccess",
+                                "src": "539:20:0",
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct Registry.Record storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 16,
+                                          "type": "mapping(bytes32 => struct Registry.Record storage ref)",
+                                          "value": "didToHash"
+                                        },
+                                        "id": 47,
+                                        "name": "Identifier",
+                                        "src": "539:9:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 29,
+                                          "type": "bytes32",
+                                          "value": "did"
+                                        },
+                                        "id": 48,
+                                        "name": "Identifier",
+                                        "src": "549:3:0"
+                                      }
+                                    ],
+                                    "id": 49,
+                                    "name": "IndexAccess",
+                                    "src": "539:14:0"
+                                  }
+                                ]
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 104,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 51,
+                                    "name": "Identifier",
+                                    "src": "563:3:0"
+                                  }
+                                ],
+                                "id": 52,
+                                "name": "MemberAccess",
+                                "src": "563:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 88,
+                                  "type": "bytes32",
+                                  "value": "_newHash"
+                                },
+                                "id": 119,
+                                "name": "Identifier",
+                                "src": "641:8:1"
+                              }
+                            ],
+                            "id": 53,
+                            "name": "BinaryOperation",
+                            "src": "539:34:0"
+                          }
+                        ],
+                        "id": 54,
+                        "name": "BinaryOperation",
+                        "src": "514:59:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "tuple()",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 8,
+                                      "type": "function ()",
+                                      "value": "registrationFailure"
+                                    },
+                                    "id": 55,
+                                    "name": "Identifier",
+                                    "src": "589:19:0"
+                                  }
+                                ],
+                                "id": 56,
+                                "name": "FunctionCall",
+                                "src": "589:21:0"
+                              }
+                            ],
+                            "id": 57,
                             "name": "ExpressionStatement",
-                            "src": "533:21:1"
+                            "src": "589:21:0"
                           },
                           {
                             "children": [
@@ -830,33 +1226,36 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 158,
+                                      "referencedDeclaration": 108,
                                       "type": "function () pure",
                                       "value": "revert"
                                     },
-                                    "id": 108,
+                                    "id": 58,
                                     "name": "Identifier",
-                                    "src": "568:6:1"
+                                    "src": "624:6:0"
                                   }
                                 ],
-                                "id": 109,
+                                "id": 59,
                                 "name": "FunctionCall",
-                                "src": "568:8:1"
+                                "src": "624:8:0"
                               }
                             ],
-                            "id": 110,
+                            "id": 60,
                             "name": "ExpressionStatement",
-                            "src": "568:8:1"
+                            "src": "624:8:0"
                           }
                         ],
-                        "id": 111,
+                        "id": 61,
                         "name": "Block",
-                        "src": "519:68:1"
+                        "src": "575:68:0"
                       }
                     ],
-                    "id": 112,
+                    "id": 62,
                     "name": "IfStatement",
-                    "src": "448:139:1"
+                    "src": "510:133:0",
+                    "attributes": {
+                      "falseBody": null
+                    }
                   },
                   {
                     "children": [
@@ -866,20 +1265,33 @@
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
+                          "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "operator": "=",
-                          "type": "struct Registry.Record storage ref"
+                          "names": [
+                            null
+                          ],
+                          "type": "struct Registry.Record storage ref",
+                          "type_conversion": false,
+                          "operator": "="
                         },
                         "children": [
                           {
                             "attributes": {
                               "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 69,
+                              "type": "struct Registry.Record storage ref",
+                              "value": "registrationSuccess",
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
-                              "lValueRequested": true,
-                              "type": "struct Registry.Record storage ref"
+                              "lValueRequested": true
                             },
+                            "id": 65,
+                            "name": "IndexAccess",
+                            "src": "661:14:0",
                             "children": [
                               {
                                 "attributes": {
@@ -887,13 +1299,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 73,
+                                  "referencedDeclaration": 16,
                                   "type": "mapping(bytes32 => struct Registry.Record storage ref)",
                                   "value": "didToHash"
                                 },
-                                "id": 113,
+                                "id": 63,
                                 "name": "Identifier",
-                                "src": "605:9:1"
+                                "src": "661:9:0"
                               },
                               {
                                 "attributes": {
@@ -901,22 +1313,25 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 86,
+                                  "referencedDeclaration": 29,
                                   "type": "bytes32",
                                   "value": "did"
                                 },
-                                "id": 114,
+                                "id": 64,
                                 "name": "Identifier",
-                                "src": "615:3:1"
+                                "src": "671:3:0"
                               }
-                            ],
-                            "id": 115,
-                            "name": "IndexAccess",
-                            "src": "605:14:1"
+                            ]
                           },
                           {
                             "attributes": {
                               "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 88,
+                              "type": "struct Registry.Record memory",
+                              "value": "_newHash",
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -925,9 +1340,11 @@
                               "names": [
                                 null
                               ],
-                              "type": "struct Registry.Record memory",
                               "type_conversion": false
                             },
+                            "id": 70,
+                            "name": "FunctionCall",
+                            "src": "678:28:0",
                             "children": [
                               {
                                 "attributes": {
@@ -937,20 +1354,20 @@
                                       "typeString": "address"
                                     },
                                     {
-                                      "typeIdentifier": "t_bytes32",
-                                      "typeString": "bytes32"
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
                                     }
                                   ],
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 63,
+                                  "referencedDeclaration": 6,
                                   "type": "type(struct Registry.Record storage pointer)",
                                   "value": "Record"
                                 },
-                                "id": 116,
+                                "id": 66,
                                 "name": "Identifier",
-                                "src": "622:6:1"
+                                "src": "678:6:0"
                               },
                               {
                                 "attributes": {
@@ -970,18 +1387,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 154,
+                                      "referencedDeclaration": 104,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 117,
+                                    "id": 67,
                                     "name": "Identifier",
-                                    "src": "629:3:1"
+                                    "src": "685:3:0"
                                   }
                                 ],
-                                "id": 118,
+                                "id": 68,
                                 "name": "MemberAccess",
-                                "src": "629:10:1"
+                                "src": "685:10:0"
                               },
                               {
                                 "attributes": {
@@ -989,28 +1406,25 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 88,
-                                  "type": "bytes32",
+                                  "referencedDeclaration": 31,
+                                  "type": "string memory",
                                   "value": "_newHash"
                                 },
-                                "id": 119,
+                                "id": 69,
                                 "name": "Identifier",
-                                "src": "641:8:1"
+                                "src": "697:8:0"
                               }
-                            ],
-                            "id": 120,
-                            "name": "FunctionCall",
-                            "src": "622:28:1"
+                            ]
                           }
                         ],
-                        "id": 121,
+                        "id": 71,
                         "name": "Assignment",
-                        "src": "605:45:1"
+                        "src": "661:45:0"
                       }
                     ],
-                    "id": 122,
+                    "id": 72,
                     "name": "ExpressionStatement",
-                    "src": "605:45:1"
+                    "src": "661:45:0"
                   },
                   {
                     "children": [
@@ -1033,20 +1447,20 @@
                             "attributes": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_bytes32",
-                                  "typeString": "bytes32"
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
                                 }
                               ],
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 69,
-                              "type": "function (bytes32)",
+                              "referencedDeclaration": 12,
+                              "type": "function (string memory)",
                               "value": "registrationSuccess"
                             },
-                            "id": 123,
+                            "id": 73,
                             "name": "Identifier",
-                            "src": "660:19:1"
+                            "src": "716:19:0"
                           },
                           {
                             "attributes": {
@@ -1054,33 +1468,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 88,
-                              "type": "bytes32",
+                              "referencedDeclaration": 31,
+                              "type": "string memory",
                               "value": "_newHash"
                             },
-                            "id": 124,
+                            "id": 74,
                             "name": "Identifier",
-                            "src": "680:8:1"
+                            "src": "736:8:0"
                           }
                         ],
-                        "id": 125,
+                        "id": 75,
                         "name": "FunctionCall",
-                        "src": "660:29:1"
+                        "src": "716:29:0"
                       }
                     ],
-                    "id": 126,
+                    "id": 76,
                     "name": "ExpressionStatement",
-                    "src": "660:29:1"
+                    "src": "716:29:0"
                   }
                 ],
-                "id": 127,
+                "id": 77,
                 "name": "Block",
-                "src": "438:258:1"
+                "src": "435:317:0"
               }
             ],
-            "id": 128,
+            "id": 78,
             "name": "FunctionDefinition",
-            "src": "381:315:1"
+            "src": "379:373:0"
           },
           {
             "attributes": {
@@ -1092,7 +1506,7 @@
               ],
               "name": "getRecord",
               "payable": false,
-              "scope": 142,
+              "scope": 92,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -1104,7 +1518,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_did",
-                      "scope": 141,
+                      "scope": 91,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1117,19 +1531,19 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 129,
+                        "id": 79,
                         "name": "ElementaryTypeName",
-                        "src": "726:7:1"
+                        "src": "782:7:0"
                       }
                     ],
-                    "id": 130,
+                    "id": 80,
                     "name": "VariableDeclaration",
-                    "src": "726:12:1"
+                    "src": "782:12:0"
                   }
                 ],
-                "id": 131,
+                "id": 81,
                 "name": "ParameterList",
-                "src": "725:14:1"
+                "src": "781:14:0"
               },
               {
                 "children": [
@@ -1137,38 +1551,38 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 141,
+                      "scope": 91,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "bytes32",
+                      "type": "string memory",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
+                          "name": "string",
+                          "type": "string storage pointer"
                         },
-                        "id": 132,
+                        "id": 82,
                         "name": "ElementaryTypeName",
-                        "src": "761:7:1"
+                        "src": "817:6:0"
                       }
                     ],
-                    "id": 133,
+                    "id": 83,
                     "name": "VariableDeclaration",
-                    "src": "761:7:1"
+                    "src": "817:6:0"
                   }
                 ],
-                "id": 134,
+                "id": 84,
                 "name": "ParameterList",
-                "src": "760:9:1"
+                "src": "816:8:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 134
+                      "functionReturnParameters": 84
                     },
                     "children": [
                       {
@@ -1179,8 +1593,8 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "ddoHash",
-                          "referencedDeclaration": 62,
-                          "type": "bytes32"
+                          "referencedDeclaration": 5,
+                          "type": "string storage ref"
                         },
                         "children": [
                           {
@@ -1199,13 +1613,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 73,
+                                  "referencedDeclaration": 16,
                                   "type": "mapping(bytes32 => struct Registry.Record storage ref)",
                                   "value": "didToHash"
                                 },
-                                "id": 135,
+                                "id": 85,
                                 "name": "Identifier",
-                                "src": "787:9:1"
+                                "src": "842:9:0"
                               },
                               {
                                 "attributes": {
@@ -1213,54 +1627,60 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 130,
+                                  "referencedDeclaration": 80,
                                   "type": "bytes32",
                                   "value": "_did"
                                 },
-                                "id": 136,
+                                "id": 86,
                                 "name": "Identifier",
-                                "src": "797:4:1"
+                                "src": "852:4:0"
                               }
                             ],
-                            "id": 137,
+                            "id": 87,
                             "name": "IndexAccess",
-                            "src": "787:15:1"
+                            "src": "842:15:0"
                           }
                         ],
-                        "id": 138,
+                        "id": 88,
                         "name": "MemberAccess",
-                        "src": "787:23:1"
+                        "src": "842:23:0"
                       }
                     ],
-                    "id": 139,
+                    "id": 89,
                     "name": "Return",
-                    "src": "780:30:1"
+                    "src": "835:30:0"
                   }
                 ],
-                "id": 140,
+                "id": 90,
                 "name": "Block",
-                "src": "770:47:1"
+                "src": "825:47:0"
               }
             ],
-            "id": 141,
+            "id": 91,
             "name": "FunctionDefinition",
-            "src": "707:110:1"
+            "src": "763:109:0"
           }
         ],
-        "id": 142,
+        "id": 92,
         "name": "ContractDefinition",
-        "src": "26:793:1"
+        "src": "26:848:0"
       }
     ],
-    "id": 143,
+    "id": 93,
     "name": "SourceUnit",
-    "src": "0:820:1"
+    "src": "0:875:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xd4351c3f383d79ba378ed1875275b1e7b960f120"
+    }
+  },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-07T14:04:43.800Z"
+  "updatedAt": "2018-02-07T15:39:53.975Z"
 }

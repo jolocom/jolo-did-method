@@ -4,11 +4,11 @@ contract Registry {
     
     struct Record {
         address owner;
-        bytes32 ddoHash;
+        string ddoHash;
     }
     
     event registrationFailure();
-    event registrationSuccess(bytes32 _ddoHash);
+    event registrationSuccess(string _ddoHash);
     
     mapping (bytes32 => Record) private didToHash;
     
@@ -18,8 +18,9 @@ contract Registry {
         owner = msg.sender;
     }
     
-    function setRecord(bytes32 did, bytes32 _newHash) public {
-        if (didToHash[did].ddoHash != 0 && didToHash[did].owner != msg.sender) {
+    function setRecord(bytes32 did, string _newHash) public {
+        bytes memory emptyTest = bytes(didToHash[did].ddoHash); 
+        if (emptyTest.length != 0 && didToHash[did].owner != msg.sender) {
             registrationFailure();
             revert();
         }
@@ -28,7 +29,7 @@ contract Registry {
         registrationSuccess(_newHash);
     } 
     
-    function getRecord(bytes32 _did) public view returns (bytes32) {
+    function getRecord(bytes32 _did) public view returns (string) {
         return didToHash[_did].ddoHash;
     }
 }
