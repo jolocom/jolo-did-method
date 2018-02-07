@@ -1,5 +1,6 @@
 import * as chai from 'chai'
 import * as chaiAsPromised from 'chai-as-promised'
+import * as wallet from 'ethereumjs-wallet'
 
 import testData from './data/testData'
 
@@ -11,11 +12,13 @@ const expect = chai.expect
 
 describe('Ethereum Resolver', () => {
   const rpcEndpoint = 'http://localhost:8545'
-
   const ethResolver = new EthereumResolver(testData.contrAddr, rpcEndpoint)
+
   it('Should correctly register a user\'s DDO hash', async () => {
+    const ethereumKey = Buffer.from(testData.firstKey, 'hex')
     const hash = await ethResolver.updateDIDRecord(
-      testData.firstTestAccount, testData.testUserDID,
+      ethereumKey,
+      testData.testUserDID,
       testData.mockDDOHash
     )
 
@@ -24,8 +27,10 @@ describe('Ethereum Resolver', () => {
   })
 
   it('Should return error in case writting record fails', async () => {
+    const ethereumKey = Buffer.from(testData.secondKey, 'hex')
+
     await expect(ethResolver.updateDIDRecord(
-      testData.secondTestAcount,
+      ethereumKey,
       testData.testUserDID,
       testData.mockDDOHash
     )).to.be.rejectedWith(
