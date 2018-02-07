@@ -1,3 +1,6 @@
+import * as wallet from 'ethereumjs-wallet'
+import * as Transaction from 'ethereumjs-tx'
+
 const RegistryContract = require('../build/contracts/Registry.json')
 const Web3 = require('web3')
 
@@ -8,7 +11,7 @@ export default class EthereumResolver{
   constructor(address: string, providerUri: string) {
     const provider =  new Web3.providers.HttpProvider(providerUri)
     this.web3 = new Web3(provider)
-
+    this.contractAddress = address
     this.indexContract = new this.web3.eth.Contract(RegistryContract.abi, address)
   }
   
@@ -24,29 +27,33 @@ export default class EthereumResolver{
     })
   }
 
-  updateDIDRecord(sender: string, did: string, newHash: string): Promise<string> {
-    return new Promise((resolve, reject) => {
-      const keyHash = this._stripMethodPrefix(did)
-      
+  updateDIDRecord(ethereumKey: any, did: string, newHash: string): Promise<string> {
+    const gasLimit = 100000
+    const gasPrice = 20e9
 
-      this.indexContract.methods.setRecord(keyHash, newHash).send({
-        from: sender,
-      },(error, result) => {
-        if (error) {
-          return reject(error)
-        }
+    const w = wallet.fromPrivateKey(ethereumKey)
+    const address = w.getAddress().toString('hex')
+    const keyHash = this._stripMethodPrefix(did)
+    
+    const callData = this.indexContract.methods.setRecord(keyHash, newHash)
+      .encodeABI()
 
-        /* The web3 provider needs to support WSS, 
-         * will be configured at later stage
+    return this.web3.eth.getTransactionCount(address).then(nonce => {
+      const tx = new Transaction({
+        nonce: nonce,
+        gasLimit,
+        gasPrice,
+        data: callData,
+        to: this.contractAddress
+      })
 
-        this.indexContract.events.registrationSuccess((error, result) => {
-          console.log(error)
-          console.log(result)
-        })
+      tx.sign(ethereumKey)
+      const serializedTx = tx.serialize()
 
-        */
-
-        return resolve()
+      return new Promise((resolve, reject) => {
+        this.web3.eth.sendSignedTransaction(`0x${serializedTx.toString('hex')}`)
+        .on('confirmation', () => resolve())
+        .on('error', (err) => reject(err))
       })
     })
   }
