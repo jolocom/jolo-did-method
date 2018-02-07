@@ -1,6 +1,6 @@
 {
   "name": "jolocom-registry-contract",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Basic contract for registering DID / DDO mappings - Status: WIP - Version: 0.1",
   "main": "js/index.js",
   "typings": "js/index",
