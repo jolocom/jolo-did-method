@@ -29,7 +29,7 @@ export default class EthereumResolver{
   }
 
   updateDIDRecord(ethereumKey: any, did: string, newHash: string): Promise<string> {
-    const gasLimit = 100000
+    const gasLimit = 250000
     const gasPrice = 20e9
 
     const w = wallet.fromPrivateKey(ethereumKey)
