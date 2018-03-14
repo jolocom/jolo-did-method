@@ -1,6 +1,6 @@
 {
   "name": "jolocom-registry-contract",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Basic contract for registering DID / DDO mappings - Status: WIP - Version: 0.1",
   "main": "js/index.js",
   "typings": "js/index",
@@ -20,7 +20,7 @@
     "truffle-hdwallet-provider": "0.0.3",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2",
-    "web3": "^1.0.0-beta.29"
+    "web3": "1.0.0-beta.29"
   },
   "devDependencies": {
     "@types/node": "^9.4.0",
