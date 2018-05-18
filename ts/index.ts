@@ -60,6 +60,6 @@ export default class EthereumResolver{
   }
 
   private _stripMethodPrefix(did: string): string {
-    return did.substring(did.lastIndexOf(':') + 1)
+    return `0x${did.substring(did.lastIndexOf(':') + 1)}`
   }
 }
