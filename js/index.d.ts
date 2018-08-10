@@ -1,3 +1,6 @@
+export declare class TestDeployment {
+    static deployIdentityContract(web3: any, from: string): Promise<string>;
+}
 export default class EthereumResolver {
     private web3;
     private indexContract;
