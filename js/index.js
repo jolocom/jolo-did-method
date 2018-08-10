@@ -4,6 +4,25 @@ var wallet = require("ethereumjs-wallet");
 var Transaction = require("ethereumjs-tx");
 var RegistryContract = require('../build/contracts/Registry.json');
 var Web3 = require('web3');
+var TestDeployment = (function () {
+    function TestDeployment() {
+    }
+    TestDeployment.deployIdentityContract = function (web3, from) {
+        return new Promise(function (resolve, reject) {
+            var contract = new web3.eth.Contract(RegistryContract.abi);
+            contract.deploy({
+                data: RegistryContract.bytecode
+            }).send({
+                gas: 467000,
+                from: from
+            }).on('receipt', function (receipt) {
+                return resolve(receipt.contractAddress);
+            }).on('error', reject);
+        });
+    };
+    return TestDeployment;
+}());
+exports.TestDeployment = TestDeployment;
 var EthereumResolver = (function () {
     function EthereumResolver(address, providerUri) {
         var provider = new Web3.providers.HttpProvider(providerUri);
@@ -25,7 +44,7 @@ var EthereumResolver = (function () {
     };
     EthereumResolver.prototype.updateDIDRecord = function (ethereumKey, did, newHash) {
         var _this = this;
-        var gasLimit = 100000;
+        var gasLimit = 250000;
         var gasPrice = 20e9;
         var w = wallet.fromPrivateKey(ethereumKey);
         var address = w.getAddress().toString('hex');
@@ -50,7 +69,7 @@ var EthereumResolver = (function () {
         });
     };
     EthereumResolver.prototype._stripMethodPrefix = function (did) {
-        return did.substring(did.lastIndexOf(':') + 1);
+        return "0x" + did.substring(did.lastIndexOf(':') + 1);
     };
     return EthereumResolver;
 }());
