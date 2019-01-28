@@ -16,7 +16,8 @@ driver.get('/1.0/identifiers/:did', function (req, res) {
         console.log(identity.didDocument.toJSON())
         res.send(identity.didDocument.toJSON())
     }).catch(function(reason) {
-        res.send()
+        console.log(reason)
+        res.sendStatus(404)
     })
 
 })
