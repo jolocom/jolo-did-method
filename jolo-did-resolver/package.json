@@ -4,9 +4,15 @@
   "main": "ts/index.ts",
   "license": "MIT",
   "devDependencies": {
-    "did-resolver": "^1.1.0"
+    "@types/jest": "^24.0.23",
+    "did-resolver": "^1.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
   },
   "dependencies": {
+    "detect-node": "^2.0.4",
+    "fetch-node": "^0.0.1",
     "jolocom-registry-contract": "0.1.7"
   }
 }

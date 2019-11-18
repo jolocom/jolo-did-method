@@ -6,8 +6,5 @@
   "author": "VolkerSchiewe <volker.s1994@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"],
-  "devDependencies": {
-    "typescript": "^3.7.2"
-  }
+  "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"]
 }

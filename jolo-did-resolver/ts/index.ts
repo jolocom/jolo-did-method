@@ -1,4 +1,4 @@
-import { DIDDocument, DIDResolver, ParsedDID } from "did-resolver";
+import { DIDDocument, ParsedDID, Resolver } from "did-resolver";
 import EthereumResolver from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "./ipfs";
 
@@ -13,7 +13,7 @@ export function getResolver(contractAddress = CONTRACT_ADDRESS, providerUri = PR
   async function resolve(
     did: string,
     parsed: ParsedDID,
-    didResolver: DIDResolver
+    didResolver: Resolver
   ): Promise<DIDDocument | null> {
     const ipfsHash = await ethereumContract.resolveDID(parsed.id);
 
