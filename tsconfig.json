@@ -2,11 +2,14 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    // "lib": [],                             /* Specify library files to be included in the compilation. */
+    "lib": [
+      "es2015"
+    ],
+    "noImplicitAny": false,
+    /* Specify library files to be included in the compilation. */
 
     "strict": true,
     "esModuleInterop": true,
-
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   }
