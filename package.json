@@ -1,0 +1,13 @@
+{
+  "name": "jolo-did-method",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jolocom/jolo-did-method.git",
+  "author": "VolkerSchiewe <volker.s1994@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["did-registry", "jolo-did-registry", "jolo-did-resolver"],
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
