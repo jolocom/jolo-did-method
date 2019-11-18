@@ -1,13 +1,25 @@
-import { getResolver } from "../ts";
+import { getPublicProfile, getResolver } from "../ts";
 import { Resolver } from "did-resolver"
 import { testDid, testDidDoc } from "../ts/test.data";
+import EthereumResolver from "jolocom-registry-contract";
+import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe('DID Resolver', () => {
-  // TODO setup test network & test ipfs
+  let etherumConnector, ipfsAgent
+
+  beforeAll(() => {
+    // mock ethereum connector & ipfs agent
+    etherumConnector = new EthereumResolver()
+    etherumConnector.resolveDID = jest.fn().mockResolvedValue('testHash')
+    ipfsAgent = new IpfsStorageAgent('test')
+    ipfsAgent.catJSON = jest.fn().mockResolvedValue(testDidDoc)
+  })
+
   it('should resolve jolo DID', async () => {
-    const joloResolver = getResolver()
+    const joloResolver = getResolver(etherumConnector, ipfsAgent)
     const resolver = new Resolver(joloResolver)
     const didDoc = await resolver.resolve(testDid)
+    expect(ipfsAgent.catJSON).toBeCalledWith('testHash')
     expect(didDoc).toEqual(testDidDoc);
   });
 
@@ -16,5 +28,10 @@ describe('DID Resolver', () => {
     const resolver = new Resolver(joloResolver)
 
     await expect(resolver.resolve('did:jolo:notHex')).rejects.toThrow()
+  });
+
+  it('should test public profile resolver', () => {
+    getPublicProfile('test', ipfsAgent)
+    expect(ipfsAgent.catJSON).toBeCalledWith('test')
   });
 })

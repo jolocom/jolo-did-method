@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "main": "ts/index.ts",
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "did-resolver": "^1.1.0",
