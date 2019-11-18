@@ -1,9 +1,12 @@
 {
   "name": "jolo-did-resolver",
   "version": "0.0.1",
-  "main": "index.ts",
+  "main": "ts/index.ts",
   "license": "MIT",
   "devDependencies": {
     "did-resolver": "^1.1.0"
+  },
+  "dependencies": {
+    "jolocom-registry-contract": "0.1.7"
   }
 }
