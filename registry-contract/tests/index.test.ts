@@ -1,7 +1,7 @@
 import testData from './testData'
 
 import { deployIdentityContract, ganacheUri, startGanache } from "./utils";
-import EthereumResolver from "../ts";
+import EthereumConnector from "../ts";
 
 
 describe('Ethereum Resolver', () => {
@@ -10,7 +10,7 @@ describe('Ethereum Resolver', () => {
     ganacheServer = startGanache()
     const contractAddress = await deployIdentityContract()
 
-    ethResolver = new EthereumResolver(contractAddress, ganacheUri)
+    ethResolver = new EthereumConnector(contractAddress, ganacheUri)
   })
 
   afterAll(() => {
