@@ -45,31 +45,33 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b5033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610581806100616000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100fb575b600080fd5b34801561005d57600080fd5b506100806004803603810190808035600019169060200190929190505050610172565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c05780820151818401526020810190506100a5565b50505050905090810190601f1680156100ed5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010757600080fd5b506101706004803603810190808035600019169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610231565b005b606060008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102255780601f106101fa57610100808354040283529160200191610225565b820191906000526020600020905b81548152906001019060200180831161020857829003601f168201915b50505050509050919050565b606060008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b50505050509050600081511415801561036657503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156103ff576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f44494420726567697374726174696f6e206661696c65642e20496e76616c696481526020017f206469642070726976617465206b65792e00000000000000000000000000000081525060400191505060405180910390fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010190805190602001906104a79291906104b0565b50905050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104f157805160ff191683800117855561051f565b8280016001018555821561051f579182015b8281111561051e578251825591602001919060010190610503565b5b50905061052c9190610530565b5090565b61055291905b8082111561054e576000816000905550600101610536565b5090565b905600a165627a7a7230582096fc9f671b142b5df432d1a669b3c9c0b7d2ae9fca5b1afdb44bdbaf49b89b660029",
-  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100fb575b600080fd5b34801561005d57600080fd5b506100806004803603810190808035600019169060200190929190505050610172565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c05780820151818401526020810190506100a5565b50505050905090810190601f1680156100ed5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010757600080fd5b506101706004803603810190808035600019169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610231565b005b606060008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102255780601f106101fa57610100808354040283529160200191610225565b820191906000526020600020905b81548152906001019060200180831161020857829003601f168201915b50505050509050919050565b606060008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b50505050509050600081511415801561036657503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156103ff576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f44494420726567697374726174696f6e206661696c65642e20496e76616c696481526020017f206469642070726976617465206b65792e00000000000000000000000000000081525060400191505060405180910390fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010190805190602001906104a79291906104b0565b50905050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104f157805160ff191683800117855561051f565b8280016001018555821561051f579182015b8281111561051e578251825591602001919060010190610503565b5b50905061052c9190610530565b5090565b61055291905b8082111561054e576000816000905550600101610536565b5090565b905600a165627a7a7230582096fc9f671b142b5df432d1a669b3c9c0b7d2ae9fca5b1afdb44bdbaf49b89b660029",
-  "sourceMap": "25:700:0:-;;;204:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:56:0;243:10;235:5;;:18;;;;;;;;;;;;;;;;;;25:700;;;;;;",
-  "deployedSourceMap": "25:700:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;;8:9:-1;5:2;;;30:1;27;20:12;5:2;614:109:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;614:109:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:342;;8:9:-1;5:2;;;30:1;27;20:12;5:2;266:342:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;668:6;693:9;:15;703:4;693:15;;;;;;;;;;;;;;;;;:23;;686:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;;;:::o;266:342::-;332:22;363:9;:14;373:3;363:14;;;;;;;;;;;;;;;;;:22;;332:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;421:1;401:9;:16;:21;;:59;;;;;450:10;426:34;;:9;:14;436:3;426:14;;;;;;;;;;;;;;;;;:20;;;;;;;;;;;;:34;;;;401:59;397:149;;;476:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;397:149;573:28;;;;;;;;;580:10;573:28;;;;;;592:8;573:28;;;556:9;:14;566:3;556:14;;;;;;;;;;;;;;;;;:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;266:342;;;:::o;25:700::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity 0.4.24;\n\ncontract Registry {\n\n    struct Record {\n        address owner;\n        string ddoHash;\n    }\n\n    mapping (bytes32 => Record) private didToHash;\n\n    address private owner;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    function setRecord(bytes32 did, string _newHash) public {\n        bytes memory emptyTest = bytes(didToHash[did].ddoHash); \n        if (emptyTest.length != 0 && didToHash[did].owner != msg.sender) {\n            revert(\"DID registration failed. Invalid did private key.\");\n        }\n\n        didToHash[did] = Record(msg.sender, _newHash);\n    }\n\n    function getRecord(bytes32 _did) public view returns (string) {\n        return didToHash[_did].ddoHash;\n    }\n}\n",
-  "sourcePath": "/Users/focus/Documents/work/jolocom/registry-contract/contracts/Registry.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.26+commit.4563c3fc\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_did\",\"type\":\"bytes32\"}],\"name\":\"getRecord\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"did\",\"type\":\"bytes32\"},{\"name\":\"_newHash\",\"type\":\"string\"}],\"name\":\"setRecord\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/volker/Projects/jolo-did-method/registry-contract/contracts/Registry.sol\":\"Registry\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/volker/Projects/jolo-did-method/registry-contract/contracts/Registry.sol\":{\"keccak256\":\"0x2cab70f5e061b24efb32708f818ba170ae02a3c9dfbeafa4e37a0dac0c603de6\",\"urls\":[\"bzzr://f07e8efb592172d7306f88237eefe5d18c5d67072eebb14c2050c0b001ff8af4\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610581806100616000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100fb575b600080fd5b34801561005d57600080fd5b506100806004803603810190808035600019169060200190929190505050610172565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c05780820151818401526020810190506100a5565b50505050905090810190601f1680156100ed5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010757600080fd5b506101706004803603810190808035600019169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610231565b005b606060008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102255780601f106101fa57610100808354040283529160200191610225565b820191906000526020600020905b81548152906001019060200180831161020857829003601f168201915b50505050509050919050565b606060008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b50505050509050600081511415801561036657503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156103ff576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f44494420726567697374726174696f6e206661696c65642e20496e76616c696481526020017f206469642070726976617465206b65792e00000000000000000000000000000081525060400191505060405180910390fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010190805190602001906104a79291906104b0565b50905050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104f157805160ff191683800117855561051f565b8280016001018555821561051f579182015b8281111561051e578251825591602001919060010190610503565b5b50905061052c9190610530565b5090565b61055291905b8082111561054e576000816000905550600101610536565b5090565b905600a165627a7a7230582031addab126534ea1fa58dd354807eaea6081dca55d95c49d9d00d625fd50af8e0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063213681cd146100515780635ab5ee37146100fb575b600080fd5b34801561005d57600080fd5b506100806004803603810190808035600019169060200190929190505050610172565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c05780820151818401526020810190506100a5565b50505050905090810190601f1680156100ed5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010757600080fd5b506101706004803603810190808035600019169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610231565b005b606060008083600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102255780601f106101fa57610100808354040283529160200191610225565b820191906000526020600020905b81548152906001019060200180831161020857829003601f168201915b50505050509050919050565b606060008084600019166000191681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b50505050509050600081511415801561036657503373ffffffffffffffffffffffffffffffffffffffff16600080856000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614155b156103ff576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260318152602001807f44494420726567697374726174696f6e206661696c65642e20496e76616c696481526020017f206469642070726976617465206b65792e00000000000000000000000000000081525060400191505060405180910390fd5b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff16815260200183815250600080856000191660001916815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010190805190602001906104a79291906104b0565b50905050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104f157805160ff191683800117855561051f565b8280016001018555821561051f579182015b8281111561051e578251825591602001919060010190610503565b5b50905061052c9190610530565b5090565b61055291905b8082111561054e576000816000905550600101610536565b5090565b905600a165627a7a7230582031addab126534ea1fa58dd354807eaea6081dca55d95c49d9d00d625fd50af8e0029",
+  "sourceMap": "26:699:1:-;;;205:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;205:56:1;244:10;236:5;;:18;;;;;;;;;;;;;;;;;;26:699;;;;;;",
+  "deployedSourceMap": "26:699:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;;8:9:-1;5:2;;;30:1;27;20:12;5:2;614:109:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;614:109:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;267:341;;8:9:-1;5:2;;;30:1;27;20:12;5:2;267:341:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;668:6;693:9;:15;703:4;693:15;;;;;;;;;;;;;;;;;:23;;686:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;614:109;;;:::o;267:341::-;333:22;364:9;:14;374:3;364:14;;;;;;;;;;;;;;;;;:22;;333:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;421:1;401:9;:16;:21;;:59;;;;;450:10;426:34;;:9;:14;436:3;426:14;;;;;;;;;;;;;;;;;:20;;;;;;;;;;;;:34;;;;401:59;397:149;;;476:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;397:149;573:28;;;;;;;;;580:10;573:28;;;;;;592:8;573:28;;;556:9;:14;566:3;556:14;;;;;;;;;;;;;;;;;:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;267:341;;;:::o;26:699::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\ncontract Registry {\n\n    struct Record {\n        address owner;\n        string ddoHash;\n    }\n\n    mapping (bytes32 => Record) private didToHash;\n\n    address private owner;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    function setRecord(bytes32 did, string _newHash) public {\n        bytes memory emptyTest = bytes(didToHash[did].ddoHash);\n        if (emptyTest.length != 0 && didToHash[did].owner != msg.sender) {\n            revert(\"DID registration failed. Invalid did private key.\");\n        }\n\n        didToHash[did] = Record(msg.sender, _newHash);\n    }\n\n    function getRecord(bytes32 _did) public view returns (string) {\n        return didToHash[_did].ddoHash;\n    }\n}\n",
+  "sourcePath": "/home/volker/Projects/jolo-did-method/registry-contract/contracts/Registry.sol",
   "ast": {
-    "absolutePath": "/Users/focus/Documents/work/jolocom/registry-contract/contracts/Registry.sol",
+    "absolutePath": "/home/volker/Projects/jolo-did-method/registry-contract/contracts/Registry.sol",
     "exportedSymbols": {
       "Registry": [
-        80
+        137
       ]
     },
-    "id": 81,
+    "id": 138,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 58,
         "literals": [
           "solidity",
+          "^",
           "0.4",
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:24:1"
       },
       {
         "baseContracts": [],
@@ -77,24 +79,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 80,
+        "id": 137,
         "linearizedBaseContracts": [
-          80
+          137
         ],
         "name": "Registry",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Registry.Record",
-            "id": 6,
+            "id": 63,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 60,
                 "name": "owner",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "74:13:0",
+                "scope": 63,
+                "src": "75:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -102,10 +104,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 59,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "74:7:0",
+                  "src": "75:7:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
@@ -116,11 +118,11 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 62,
                 "name": "ddoHash",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "97:14:0",
+                "scope": 63,
+                "src": "98:14:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -128,10 +130,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 4,
+                  "id": 61,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "97:6:0",
+                  "src": "98:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -143,50 +145,50 @@
             ],
             "name": "Record",
             "nodeType": "StructDefinition",
-            "scope": 80,
-            "src": "50:68:0",
+            "scope": 137,
+            "src": "51:68:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 67,
             "name": "didToHash",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "124:45:0",
+            "scope": 137,
+            "src": "125:45:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
               "typeString": "mapping(bytes32 => struct Registry.Record)"
             },
             "typeName": {
-              "id": 9,
+              "id": 66,
               "keyType": {
-                "id": 7,
+                "id": 64,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
-                "src": "133:7:0",
+                "src": "134:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_bytes32",
                   "typeString": "bytes32"
                 }
               },
               "nodeType": "Mapping",
-              "src": "124:27:0",
+              "src": "125:27:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
                 "typeString": "mapping(bytes32 => struct Registry.Record)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 8,
+                "id": 65,
                 "name": "Record",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 6,
-                "src": "144:6:0",
+                "referencedDeclaration": 63,
+                "src": "145:6:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Record_$6_storage_ptr",
+                  "typeIdentifier": "t_struct$_Record_$63_storage_ptr",
                   "typeString": "struct Registry.Record"
                 }
               }
@@ -196,11 +198,11 @@
           },
           {
             "constant": false,
-            "id": 12,
+            "id": 69,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "176:21:0",
+            "scope": 137,
+            "src": "177:21:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -208,10 +210,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11,
+              "id": 68,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "176:7:0",
+              "src": "177:7:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -222,26 +224,26 @@
           },
           {
             "body": {
-              "id": 20,
+              "id": 77,
               "nodeType": "Block",
-              "src": "225:35:0",
+              "src": "226:35:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18,
+                    "id": 75,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 15,
+                      "id": 72,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12,
-                      "src": "235:5:0",
+                      "referencedDeclaration": 69,
+                      "src": "236:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -253,18 +255,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 16,
+                        "id": 73,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 95,
-                        "src": "243:3:0",
+                        "referencedDeclaration": 152,
+                        "src": "244:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 17,
+                      "id": 74,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -272,26 +274,26 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "243:10:0",
+                      "src": "244:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "235:18:0",
+                    "src": "236:18:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 19,
+                  "id": 76,
                   "nodeType": "ExpressionStatement",
-                  "src": "235:18:0"
+                  "src": "236:18:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 21,
+            "id": 78,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -299,42 +301,42 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 13,
+              "id": 70,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "215:2:0"
+              "src": "216:2:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 14,
+              "id": 71,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "225:0:0"
+              "src": "226:0:1"
             },
-            "scope": 80,
-            "src": "204:56:0",
+            "scope": 137,
+            "src": "205:56:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 65,
+              "id": 122,
               "nodeType": "Block",
-              "src": "322:286:0",
+              "src": "323:285:1",
               "statements": [
                 {
                   "assignments": [
-                    29
+                    86
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 29,
+                      "id": 86,
                       "name": "emptyTest",
                       "nodeType": "VariableDeclaration",
-                      "scope": 66,
-                      "src": "332:22:0",
+                      "scope": 123,
+                      "src": "333:22:1",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
@@ -342,10 +344,10 @@
                         "typeString": "bytes"
                       },
                       "typeName": {
-                        "id": 28,
+                        "id": 85,
                         "name": "bytes",
                         "nodeType": "ElementaryTypeName",
-                        "src": "332:5:0",
+                        "src": "333:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
                           "typeString": "bytes"
@@ -355,7 +357,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 36,
+                  "id": 93,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
@@ -365,26 +367,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 31,
+                            "id": 88,
                             "name": "didToHash",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "363:9:0",
+                            "referencedDeclaration": 67,
+                            "src": "364:9:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
                               "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
                             }
                           },
-                          "id": 33,
+                          "id": 90,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 32,
+                            "id": 89,
                             "name": "did",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 23,
-                            "src": "373:3:0",
+                            "referencedDeclaration": 80,
+                            "src": "374:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -395,21 +397,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "363:14:0",
+                          "src": "364:14:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$6_storage",
+                            "typeIdentifier": "t_struct$_Record_$63_storage",
                             "typeString": "struct Registry.Record storage ref"
                           }
                         },
-                        "id": 34,
+                        "id": 91,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "ddoHash",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5,
-                        "src": "363:22:0",
+                        "referencedDeclaration": 62,
+                        "src": "364:22:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
                           "typeString": "string storage ref"
@@ -423,20 +425,20 @@
                           "typeString": "string storage ref"
                         }
                       ],
-                      "id": 30,
+                      "id": 87,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "nodeType": "ElementaryTypeNameExpression",
-                      "src": "357:5:0",
+                      "src": "358:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
                         "typeString": "type(bytes storage pointer)"
                       },
                       "typeName": "bytes"
                     },
-                    "id": 35,
+                    "id": 92,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -444,14 +446,14 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "357:29:0",
+                    "src": "358:29:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage",
                       "typeString": "bytes storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "332:54:0"
+                  "src": "333:54:1"
                 },
                 {
                   "condition": {
@@ -460,7 +462,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 48,
+                    "id": 105,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -471,7 +473,7 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 40,
+                      "id": 97,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -480,18 +482,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 37,
+                          "id": 94,
                           "name": "emptyTest",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29,
-                          "src": "401:9:0",
+                          "referencedDeclaration": 86,
+                          "src": "401:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes_memory_ptr",
                             "typeString": "bytes memory"
                           }
                         },
-                        "id": 38,
+                        "id": 95,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -499,7 +501,7 @@
                         "memberName": "length",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "401:16:0",
+                        "src": "401:16:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -510,14 +512,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 39,
+                        "id": 96,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "421:1:0",
+                        "src": "421:1:1",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -525,7 +527,7 @@
                         },
                         "value": "0"
                       },
-                      "src": "401:21:0",
+                      "src": "401:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -539,7 +541,7 @@
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       },
-                      "id": 47,
+                      "id": 104,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -550,26 +552,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 41,
+                            "id": 98,
                             "name": "didToHash",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "426:9:0",
+                            "referencedDeclaration": 67,
+                            "src": "426:9:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
                               "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
                             }
                           },
-                          "id": 43,
+                          "id": 100,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 42,
+                            "id": 99,
                             "name": "did",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 23,
-                            "src": "436:3:0",
+                            "referencedDeclaration": 80,
+                            "src": "436:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -580,21 +582,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "426:14:0",
+                          "src": "426:14:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$6_storage",
+                            "typeIdentifier": "t_struct$_Record_$63_storage",
                             "typeString": "struct Registry.Record storage ref"
                           }
                         },
-                        "id": 44,
+                        "id": 101,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "owner",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3,
-                        "src": "426:20:0",
+                        "referencedDeclaration": 60,
+                        "src": "426:20:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -606,18 +608,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 45,
+                          "id": 102,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 95,
-                          "src": "450:3:0",
+                          "referencedDeclaration": 152,
+                          "src": "450:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 46,
+                        "id": 103,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -625,32 +627,32 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "450:10:0",
+                        "src": "450:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "src": "426:34:0",
+                      "src": "426:34:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "401:59:0",
+                    "src": "401:59:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 54,
+                  "id": 111,
                   "nodeType": "IfStatement",
-                  "src": "397:149:0",
+                  "src": "397:149:1",
                   "trueBody": {
-                    "id": 53,
+                    "id": 110,
                     "nodeType": "Block",
-                    "src": "462:84:0",
+                    "src": "462:84:1",
                     "statements": [
                       {
                         "expression": {
@@ -659,14 +661,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "44494420726567697374726174696f6e206661696c65642e20496e76616c6964206469642070726976617465206b65792e",
-                              "id": 50,
+                              "id": 107,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "string",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "483:51:0",
+                              "src": "483:51:1",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_stringliteral_4307df58153edefae587c5739dba711507f506abc1c1d8c8211d937b53c8e042",
@@ -682,21 +684,21 @@
                                 "typeString": "literal_string \"DID registration failed. Invalid did private key.\""
                               }
                             ],
-                            "id": 49,
+                            "id": 106,
                             "name": "revert",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              100,
-                              101
+                              157,
+                              158
                             ],
-                            "referencedDeclaration": 101,
-                            "src": "476:6:0",
+                            "referencedDeclaration": 158,
+                            "src": "476:6:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
                               "typeString": "function (string memory) pure"
                             }
                           },
-                          "id": 51,
+                          "id": 108,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -704,15 +706,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "476:59:0",
+                          "src": "476:59:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 52,
+                        "id": 109,
                         "nodeType": "ExpressionStatement",
-                        "src": "476:59:0"
+                        "src": "476:59:1"
                       }
                     ]
                   }
@@ -720,7 +722,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 63,
+                    "id": 120,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -729,26 +731,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 55,
+                        "id": 112,
                         "name": "didToHash",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "556:9:0",
+                        "referencedDeclaration": 67,
+                        "src": "556:9:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
                           "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
                         }
                       },
-                      "id": 57,
+                      "id": 114,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 56,
+                        "id": 113,
                         "name": "did",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 23,
-                        "src": "566:3:0",
+                        "referencedDeclaration": 80,
+                        "src": "566:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -759,9 +761,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "556:14:0",
+                      "src": "556:14:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Record_$6_storage",
+                        "typeIdentifier": "t_struct$_Record_$63_storage",
                         "typeString": "struct Registry.Record storage ref"
                       }
                     },
@@ -774,18 +776,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 59,
+                            "id": 116,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 95,
-                            "src": "580:3:0",
+                            "referencedDeclaration": 152,
+                            "src": "580:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 60,
+                          "id": 117,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -793,7 +795,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "580:10:0",
+                          "src": "580:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -801,12 +803,12 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 61,
+                          "id": 118,
                           "name": "_newHash",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 25,
-                          "src": "592:8:0",
+                          "referencedDeclaration": 82,
+                          "src": "592:8:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -824,18 +826,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 58,
+                        "id": 115,
                         "name": "Record",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6,
-                        "src": "573:6:0",
+                        "referencedDeclaration": 63,
+                        "src": "573:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Record_$6_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Record_$63_storage_ptr_$",
                           "typeString": "type(struct Registry.Record storage pointer)"
                         }
                       },
-                      "id": 62,
+                      "id": 119,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -843,26 +845,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "573:28:0",
+                      "src": "573:28:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Record_$6_memory",
+                        "typeIdentifier": "t_struct$_Record_$63_memory",
                         "typeString": "struct Registry.Record memory"
                       }
                     },
-                    "src": "556:45:0",
+                    "src": "556:45:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Record_$6_storage",
+                      "typeIdentifier": "t_struct$_Record_$63_storage",
                       "typeString": "struct Registry.Record storage ref"
                     }
                   },
-                  "id": 64,
+                  "id": 121,
                   "nodeType": "ExpressionStatement",
-                  "src": "556:45:0"
+                  "src": "556:45:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 66,
+            "id": 123,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -870,16 +872,16 @@
             "name": "setRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 23,
+                  "id": 80,
                   "name": "did",
                   "nodeType": "VariableDeclaration",
-                  "scope": 66,
-                  "src": "285:11:0",
+                  "scope": 123,
+                  "src": "286:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -887,10 +889,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 22,
+                    "id": 79,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "285:7:0",
+                    "src": "286:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -901,11 +903,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 25,
+                  "id": 82,
                   "name": "_newHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 66,
-                  "src": "298:15:0",
+                  "scope": 123,
+                  "src": "299:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -913,10 +915,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 24,
+                    "id": 81,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "298:6:0",
+                    "src": "299:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -926,26 +928,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "284:30:0"
+              "src": "285:30:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 27,
+              "id": 84,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "322:0:0"
+              "src": "323:0:1"
             },
-            "scope": 80,
-            "src": "266:342:0",
+            "scope": 137,
+            "src": "267:341:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 78,
+              "id": 135,
               "nodeType": "Block",
-              "src": "676:47:0",
+              "src": "676:47:1",
               "statements": [
                 {
                   "expression": {
@@ -954,26 +956,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 73,
+                        "id": 130,
                         "name": "didToHash",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "693:9:0",
+                        "referencedDeclaration": 67,
+                        "src": "693:9:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$6_storage_$",
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
                           "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
                         }
                       },
-                      "id": 75,
+                      "id": 132,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 74,
+                        "id": 131,
                         "name": "_did",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 68,
-                        "src": "703:4:0",
+                        "referencedDeclaration": 125,
+                        "src": "703:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -984,35 +986,35 @@
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "693:15:0",
+                      "src": "693:15:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Record_$6_storage",
+                        "typeIdentifier": "t_struct$_Record_$63_storage",
                         "typeString": "struct Registry.Record storage ref"
                       }
                     },
-                    "id": 76,
+                    "id": 133,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "ddoHash",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 5,
-                    "src": "693:23:0",
+                    "referencedDeclaration": 62,
+                    "src": "693:23:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 72,
-                  "id": 77,
+                  "functionReturnParameters": 129,
+                  "id": 134,
                   "nodeType": "Return",
-                  "src": "686:30:0"
+                  "src": "686:30:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 79,
+            "id": 136,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1020,16 +1022,16 @@
             "name": "getRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 69,
+              "id": 126,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 68,
+                  "id": 125,
                   "name": "_did",
                   "nodeType": "VariableDeclaration",
-                  "scope": 79,
-                  "src": "633:12:0",
+                  "scope": 136,
+                  "src": "633:12:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1037,10 +1039,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 67,
+                    "id": 124,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "633:7:0",
+                    "src": "633:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1050,20 +1052,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "632:14:0"
+              "src": "632:14:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 72,
+              "id": 129,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 71,
+                  "id": 128,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 79,
-                  "src": "668:6:0",
+                  "scope": 136,
+                  "src": "668:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1071,10 +1073,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 70,
+                    "id": 127,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "668:6:0",
+                    "src": "668:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1084,24 +1086,1073 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "667:8:0"
+              "src": "667:8:1"
             },
-            "scope": 80,
-            "src": "614:109:0",
+            "scope": 137,
+            "src": "614:109:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 81,
-        "src": "25:700:0"
+        "scope": 138,
+        "src": "26:699:1"
       }
     ],
-    "src": "0:726:0"
+    "src": "0:726:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/volker/Projects/jolo-did-method/registry-contract/contracts/Registry.sol",
+    "exportedSymbols": {
+      "Registry": [
+        137
+      ]
+    },
+    "id": 138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 137,
+        "linearizedBaseContracts": [
+          137
+        ],
+        "name": "Registry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Registry.Record",
+            "id": 63,
+            "members": [
+              {
+                "constant": false,
+                "id": 60,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "75:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 59,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "75:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 62,
+                "name": "ddoHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 63,
+                "src": "98:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 61,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "98:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Record",
+            "nodeType": "StructDefinition",
+            "scope": 137,
+            "src": "51:68:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 67,
+            "name": "didToHash",
+            "nodeType": "VariableDeclaration",
+            "scope": 137,
+            "src": "125:45:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+              "typeString": "mapping(bytes32 => struct Registry.Record)"
+            },
+            "typeName": {
+              "id": 66,
+              "keyType": {
+                "id": 64,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "134:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "125:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+                "typeString": "mapping(bytes32 => struct Registry.Record)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 65,
+                "name": "Record",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 63,
+                "src": "145:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Record_$63_storage_ptr",
+                  "typeString": "struct Registry.Record"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 69,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 137,
+            "src": "177:21:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 68,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "177:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "226:35:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 72,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 69,
+                      "src": "236:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 73,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "244:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "244:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "236:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 76,
+                  "nodeType": "ExpressionStatement",
+                  "src": "236:18:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 78,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "216:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:0:1"
+            },
+            "scope": 137,
+            "src": "205:56:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "323:285:1",
+              "statements": [
+                {
+                  "assignments": [
+                    86
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 86,
+                      "name": "emptyTest",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 123,
+                      "src": "333:22:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 85,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "333:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 93,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 88,
+                            "name": "didToHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "364:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+                              "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
+                            }
+                          },
+                          "id": 90,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 89,
+                            "name": "did",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 80,
+                            "src": "374:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "364:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Record_$63_storage",
+                            "typeString": "struct Registry.Record storage ref"
+                          }
+                        },
+                        "id": 91,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ddoHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 62,
+                        "src": "364:22:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      ],
+                      "id": 87,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "358:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                        "typeString": "type(bytes storage pointer)"
+                      },
+                      "typeName": "bytes"
+                    },
+                    "id": 92,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "358:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage",
+                      "typeString": "bytes storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "333:54:1"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 105,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 94,
+                          "name": "emptyTest",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 86,
+                          "src": "401:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        "id": 95,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "401:16:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "!=",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 96,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "421:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "401:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "id": 104,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 98,
+                            "name": "didToHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "426:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+                              "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
+                            }
+                          },
+                          "id": 100,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 99,
+                            "name": "did",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 80,
+                            "src": "436:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "426:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Record_$63_storage",
+                            "typeString": "struct Registry.Record storage ref"
+                          }
+                        },
+                        "id": 101,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "owner",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 60,
+                        "src": "426:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "!=",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 102,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 152,
+                          "src": "450:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 103,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "450:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "src": "426:34:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "401:59:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 111,
+                  "nodeType": "IfStatement",
+                  "src": "397:149:1",
+                  "trueBody": {
+                    "id": 110,
+                    "nodeType": "Block",
+                    "src": "462:84:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "44494420726567697374726174696f6e206661696c65642e20496e76616c6964206469642070726976617465206b65792e",
+                              "id": 107,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "483:51:1",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_4307df58153edefae587c5739dba711507f506abc1c1d8c8211d937b53c8e042",
+                                "typeString": "literal_string \"DID registration failed. Invalid did private key.\""
+                              },
+                              "value": "DID registration failed. Invalid did private key."
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_4307df58153edefae587c5739dba711507f506abc1c1d8c8211d937b53c8e042",
+                                "typeString": "literal_string \"DID registration failed. Invalid did private key.\""
+                              }
+                            ],
+                            "id": 106,
+                            "name": "revert",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              157,
+                              158
+                            ],
+                            "referencedDeclaration": 158,
+                            "src": "476:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory) pure"
+                            }
+                          },
+                          "id": 108,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "476:59:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 109,
+                        "nodeType": "ExpressionStatement",
+                        "src": "476:59:1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 120,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 112,
+                        "name": "didToHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 67,
+                        "src": "556:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+                          "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
+                        }
+                      },
+                      "id": 114,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 113,
+                        "name": "did",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 80,
+                        "src": "566:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "556:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$63_storage",
+                        "typeString": "struct Registry.Record storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 116,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 152,
+                            "src": "580:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 117,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "580:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 118,
+                          "name": "_newHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 82,
+                          "src": "592:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 115,
+                        "name": "Record",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "573:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Record_$63_storage_ptr_$",
+                          "typeString": "type(struct Registry.Record storage pointer)"
+                        }
+                      },
+                      "id": 119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "573:28:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$63_memory",
+                        "typeString": "struct Registry.Record memory"
+                      }
+                    },
+                    "src": "556:45:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Record_$63_storage",
+                      "typeString": "struct Registry.Record storage ref"
+                    }
+                  },
+                  "id": 121,
+                  "nodeType": "ExpressionStatement",
+                  "src": "556:45:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 123,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setRecord",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "did",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "286:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "_newHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "299:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "285:30:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:0:1"
+            },
+            "scope": 137,
+            "src": "267:341:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 135,
+              "nodeType": "Block",
+              "src": "676:47:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 130,
+                        "name": "didToHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 67,
+                        "src": "693:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Record_$63_storage_$",
+                          "typeString": "mapping(bytes32 => struct Registry.Record storage ref)"
+                        }
+                      },
+                      "id": 132,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 131,
+                        "name": "_did",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 125,
+                        "src": "703:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "693:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Record_$63_storage",
+                        "typeString": "struct Registry.Record storage ref"
+                      }
+                    },
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "ddoHash",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 62,
+                    "src": "693:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 129,
+                  "id": 134,
+                  "nodeType": "Return",
+                  "src": "686:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 136,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getRecord",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 125,
+                  "name": "_did",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 136,
+                  "src": "633:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 124,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "632:14:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 129,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 128,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 136,
+                  "src": "668:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 127,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "668:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "667:8:1"
+            },
+            "scope": 137,
+            "src": "614:109:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 138,
+        "src": "26:699:1"
+      }
+    ],
+    "src": "0:726:1"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.4.26+commit.4563c3fc.Emscripten.clang"
   },
   "networks": {
     "5777": {
@@ -1115,6 +2166,12 @@
       "address": "0x619a0b45e669647fcd559f1c58ef88185da93feb"
     }
   },
-  "schemaVersion": "1.0.1",
-  "updatedAt": "2018-08-10T15:34:52.271Z"
+  "schemaVersion": "3.0.19",
+  "updatedAt": "2019-11-19T08:18:19.296Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
 }

@@ -6,11 +6,10 @@
       "es2015"
     ],
     "noImplicitAny": false,
-    /* Specify library files to be included in the compilation. */
 
     "strict": true,
     "esModuleInterop": true,
-    /* Advanced Options */
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   }
 }

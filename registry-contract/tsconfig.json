@@ -1,11 +1,10 @@
 {
   "extends": "../tsconfig",
   "compilerOptions": {
-    "outDir": "./js",
-    "rootDir": "./ts"
+    "outDir": "js",
+    "rootDir": "ts"
   },
-  "include": [
-    "./ts/**/*.ts",
-    "!./node_modules/**/*.ts"
-    ]
+  "exclude": [
+    "tests"
+  ]
 }

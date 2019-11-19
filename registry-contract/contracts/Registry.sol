@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity ^0.4.24;
 
 contract Registry {
 
@@ -16,7 +16,7 @@ contract Registry {
     }
 
     function setRecord(bytes32 did, string _newHash) public {
-        bytes memory emptyTest = bytes(didToHash[did].ddoHash); 
+        bytes memory emptyTest = bytes(didToHash[did].ddoHash);
         if (emptyTest.length != 0 && didToHash[did].owner != msg.sender) {
             revert("DID registration failed. Invalid did private key.");
         }

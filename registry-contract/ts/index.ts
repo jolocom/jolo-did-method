@@ -1,28 +1,8 @@
 import * as wallet from 'ethereumjs-wallet'
-import * as Transaction from 'ethereumjs-tx'
+import Transaction from 'ethereumjs-tx'
 
 const RegistryContract = require('../build/contracts/Registry.json')
 const Web3 = require('web3')
-
-/*
-* Helper class to assist with local deployment for testing purposes
-*/
-export class TestDeployment {
-  public static deployIdentityContract(web3: any, from: string): Promise<string> {
-    return new Promise((resolve, reject) => {
-      const contract = new web3.eth.Contract(RegistryContract.abi)
-
-      contract.deploy({
-        data: RegistryContract.bytecode
-      }).send({
-        gas: 467000,
-        from
-      }).on('receipt', receipt => {
-        return resolve(receipt.contractAddress)
-      }).on('error', reject)
-    })
-  }
-}
 
 export default class EthereumResolver{
   private web3: any
