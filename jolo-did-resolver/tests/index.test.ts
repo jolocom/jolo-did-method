@@ -9,7 +9,7 @@ describe('DID Resolver', () => {
 
   beforeAll(() => {
     // mock ethereum connector & ipfs agent
-    etherumConnector = new EthereumResolver()
+    etherumConnector = new EthereumResolver('address', 'rpc-host')
     etherumConnector.resolveDID = jest.fn().mockResolvedValue('testHash')
     ipfsAgent = new IpfsStorageAgent('test')
     ipfsAgent.catJSON = jest.fn().mockResolvedValue(testDidDoc)

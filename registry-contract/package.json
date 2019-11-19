@@ -6,7 +6,7 @@
   "typings": "js/index",
   "scripts": {
     "prepare": "tsc",
-    "test": "truffle compile && jest"
+    "test": "truffle compile && jest --forceExit"
   },
   "author": "Eugeniu Rusu",
   "dependencies": {

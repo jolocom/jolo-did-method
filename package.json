@@ -6,5 +6,8 @@
   "author": "VolkerSchiewe <volker.s1994@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "yarn workspaces run test"
+  },
   "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"]
 }
