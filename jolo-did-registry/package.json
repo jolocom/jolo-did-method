@@ -5,5 +5,16 @@
   "license": "MIT",
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "detect-node": "^2.0.4",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@decentralized-identity/did-common-typescript": "^0.1.19",
+    "@types/detect-node": "^2.0.0",
+    "@types/form-data": "^2.5.0",
+    "typescript": "^3.7.2"
   }
 }
