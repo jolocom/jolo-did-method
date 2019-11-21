@@ -2,9 +2,12 @@
   "extends": "../tsconfig",
   "compilerOptions": {
     "outDir": "js",
-    "rootDir": "ts"
+    "rootDir": "ts",
+    "skipLibCheck": true
   },
   "exclude": [
-    "tests"
+    "js",
+    "tests",
+    "node_modules"
   ]
 }

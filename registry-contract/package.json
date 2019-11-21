@@ -6,6 +6,7 @@
   "typings": "js/index",
   "scripts": {
     "prepare": "tsc",
+    "clean": "rm -rf js node_modules",
     "test": "truffle compile && jest --forceExit",
     "deploy:testnet": "truffle deploy --network rinkeby "
   },

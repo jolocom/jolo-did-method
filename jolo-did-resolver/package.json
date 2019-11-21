@@ -4,6 +4,8 @@
   "main": "ts/index.ts",
   "license": "MIT",
   "scripts": {
+    "prepare": "tsc",
+    "clean": "rm -rf js node_modules",
     "test": "jest",
     "build": "tsc"
   },

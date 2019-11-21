@@ -3,5 +3,9 @@
   "compilerOptions": {
     "rootDir": "ts",
     "outDir": "js"
-  }
+  },
+  "exclude": [
+    "tests",
+    "js"
+  ]
 }

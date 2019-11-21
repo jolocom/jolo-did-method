@@ -7,6 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prepare": "yarn workspaces run prepare",
+    "clean": "yarn workspaces run clean && rm -rf node_modules",
     "test": "yarn workspaces run test"
   },
   "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"]

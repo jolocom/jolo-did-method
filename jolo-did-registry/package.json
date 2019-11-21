@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prepare": "tsc",
+    "clean": "rm -rf js node_modules",
     "test": "echo 'no tests yet'"
   },
   "dependencies": {

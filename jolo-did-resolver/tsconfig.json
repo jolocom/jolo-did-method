@@ -4,5 +4,8 @@
     "outDir": "js",
     "rootDir": "ts"
   },
-  "exclude": ["tests"]
+  "exclude": [
+    "tests",
+    "js"
+  ]
 }
