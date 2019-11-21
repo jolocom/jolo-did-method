@@ -5,6 +5,7 @@ module.exports = {
     networks: {
         rinkeby: {
             provider: () => {
+                //Define environment variables in .env file before running yarn deploy:testnet
                 return new HDWalletProvider(process.env.MNEMONIC, `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`)
             },
             network_id: 4
