@@ -1,6 +1,6 @@
 import { getPublicProfile, getResolver } from "../ts";
 import { Resolver } from "did-resolver"
-import { testDid, testDidDoc } from "../ts/test.data";
+import { testDid, testDidDoc } from "./test.data";
 import EthereumResolver from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 
