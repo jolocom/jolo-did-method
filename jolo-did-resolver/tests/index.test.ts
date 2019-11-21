@@ -12,14 +12,14 @@ describe('DID Resolver', () => {
     etherumConnector = new EthereumResolver('address', 'rpc-host')
     etherumConnector.resolveDID = jest.fn().mockResolvedValue('testHash')
     ipfsAgent = new IpfsStorageAgent('http://127.0.0.1:5001')
-    // ipfsAgent.catJSON = jest.fn().mockResolvedValue(testDidDoc)
+    ipfsAgent.catJSON = jest.fn().mockResolvedValue(testDidDoc)
   })
 
   it('should resolve jolo DID', async () => {
     const joloResolver = getResolver(etherumConnector, ipfsAgent)
     const resolver = new Resolver(joloResolver)
     const didDoc = await resolver.resolve(testDid)
-    // expect(ipfsAgent.catJSON).toBeCalledWith('QmRdmodnKFxmkSQnkWY35cdmSJtbhhJBADMwnCCauYBDv6')
+    expect(ipfsAgent.catJSON).toBeCalledWith('testHash')
     expect(didDoc).toEqual(testDidDoc);
   });
 
@@ -31,8 +31,7 @@ describe('DID Resolver', () => {
   });
 
   it('should test public profile resolver', async () => {
-    const resilt = await getPublicProfile('QmRdmodnKFxmkSQnkWY35cdmSJtbhhJBADMwnCCauYBDv6', ipfsAgent)
-    console.log(resilt)
+    await getPublicProfile('test', ipfsAgent)
     expect(ipfsAgent.catJSON).toBeCalledWith('test')
   });
 })
