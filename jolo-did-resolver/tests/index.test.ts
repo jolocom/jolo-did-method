@@ -5,25 +5,24 @@ import EthereumResolver from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe('DID Resolver', () => {
-  let etherumConnector, ipfsAgent
-
+  let ethereumMock
   beforeAll(() => {
-    // mock ethereum connector & ipfs agent
-    etherumConnector = new EthereumResolver('0xD4351c3f383d79bA378ed1875275b1E7b960f120', 'rpc-host')
-    etherumConnector.resolveDID = jest.fn().mockResolvedValue('testHash')
-    ipfsAgent = new IpfsStorageAgent('http://127.0.0.1:5001')
-    ipfsAgent.catJSON = jest.fn().mockResolvedValue(testDidDoc)
+    ethereumMock = jest.spyOn(EthereumResolver.prototype, 'resolveDID').mockResolvedValue('testHash')
+    jest.spyOn(IpfsStorageAgent.prototype, 'catJSON').mockResolvedValue(testDidDoc)
   })
 
   it('should resolve jolo DID', async () => {
-    const joloResolver = getResolver(etherumConnector, ipfsAgent)
+    const joloResolver = getResolver('etherumConnector', '0xD4351c3f383d79bA378ed1875275b1E7b960f120', 'http:test:8000')
     const resolver = new Resolver(joloResolver)
     const didDoc = await resolver.resolve(testDid)
-    expect(ipfsAgent.catJSON).toBeCalledWith('testHash')
+    expect(IpfsStorageAgent.prototype.catJSON).toBeCalledWith('testHash')
     expect(didDoc).toEqual(testDidDoc);
   });
 
   it('should fail if did id string is wrong', async () => {
+    // disable mock in this test
+    ethereumMock.mockRestore()
+
     const joloResolver = getResolver()
     const resolver = new Resolver(joloResolver)
 
@@ -31,7 +30,7 @@ describe('DID Resolver', () => {
   });
 
   it('should test public profile resolver', async () => {
-    await getPublicProfile('test', ipfsAgent)
-    expect(ipfsAgent.catJSON).toBeCalledWith('test')
+    await getPublicProfile('test', 'test')
+    expect(IpfsStorageAgent.prototype.catJSON).toBeCalledWith('test')
   });
 })
