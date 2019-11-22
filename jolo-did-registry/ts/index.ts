@@ -3,29 +3,36 @@ import { IpfsStorageAgent } from "./ipfs";
 import { IDidDocument } from "@decentralized-identity/did-common-typescript"
 
 const JOLOCOM_PUBLIC_PROFILE_TYPE = "JolocomPublicProfile"
+export const infura = 'https://rinkeby.infura.io/'
+export const jolocomContract = '0xd4351c3f383d79ba378ed1875275b1e7b960f120'
+export const jolocomIpfsHost = 'https://ipfs.jolocom.com:443'
 
-export function getRegistry(providerUrl: string, contractAddress: string, ipfsHost: string) {
+export function getRegistry(providerUrl: string = infura, contractAddress: string = jolocomContract, ipfsHost: string = jolocomIpfsHost) {
   const registryContract = new EthereumResolver(contractAddress, providerUrl)
   const ipfs = new IpfsStorageAgent(ipfsHost)
   return {
-    commitDidDoc: async (privateKey: string, didDocument: IDidDocument, publicProfile?: any): Promise<IDidDocument> => {
-      let publicProfileSection
+    commitDidDoc: async (privateKeyHex: string, didDocument: IDidDocument, publicProfile?: any): Promise<IDidDocument> => {
+      let publicProfileSection, profileServiceIndex
+      if (didDocument.service)
+        profileServiceIndex = didDocument.service.findIndex(s => s.type === JOLOCOM_PUBLIC_PROFILE_TYPE)
+
       if (publicProfile) {
         const profileHash = await ipfs.storeJSON(publicProfile)
         publicProfileSection = generatePublicProfileServiceSection(didDocument.id, profileHash)
+        if (!didDocument.service)
+          didDocument.service = []
+        if (profileServiceIndex === -1 || profileServiceIndex === undefined)
+          didDocument.service.push(publicProfileSection)
+        else
+          didDocument.service[profileServiceIndex] = publicProfileSection
+      } else {
+        if (profileServiceIndex > -1)
+          didDocument.service?.splice(profileServiceIndex, 1)
       }
-
-      if (!didDocument.service)
-        didDocument.service = []
-      const profileServiceIndex = didDocument.service.findIndex(s => s.type === JOLOCOM_PUBLIC_PROFILE_TYPE)
-      if (profileServiceIndex === -1)
-        didDocument.service.push(publicProfileSection)
-      else
-        didDocument.service[profileServiceIndex] = publicProfileSection
 
       const documentHash = await ipfs.storeJSON(didDocument)
 
-      await registryContract.updateDIDRecord(privateKey, didDocument.id, documentHash)
+      await registryContract.updateDIDRecord(Buffer.from(privateKeyHex, 'hex'), didDocument.id, documentHash)
       return didDocument
     }
   }
