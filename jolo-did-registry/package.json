@@ -1,13 +1,17 @@
 {
   "name": "jolo-did-registry",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "js",
+  "types": "js",
   "license": "MIT",
   "scripts": {
     "prepare": "tsc",
     "clean": "rm -rf js node_modules",
     "test": "jest"
   },
+  "files": [
+    "js"
+  ],
   "dependencies": {
     "detect-node": "^2.0.4",
     "form-data": "^3.0.0",
