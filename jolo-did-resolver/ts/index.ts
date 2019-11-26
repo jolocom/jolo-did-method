@@ -23,7 +23,7 @@ export function getResolver(providerUri: string = PROVIDER_URI, contractAddress:
   return { "jolo": resolve }
 }
 
-export async function getPublicProfile(ipfsHash: string, ipfsHost: string): Promise<object> {
+export async function getPublicProfile(ipfsHash: string, ipfsHost: string): Promise<any> {
   const ipfsAgent = new  IpfsStorageAgent(ipfsHost)
   return ipfsAgent.catJSON(ipfsHash)
 }
