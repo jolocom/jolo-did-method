@@ -1,4 +1,4 @@
-import EthereumResolver from "jolocom-registry-contract/js";
+import RegistryContract from "jolocom-registry-contract/js";
 import { IpfsStorageAgent } from "./ipfs";
 import { IDidDocument } from "@decentralized-identity/did-common-typescript"
 
@@ -8,7 +8,7 @@ export const jolocomContract = '0xd4351c3f383d79ba378ed1875275b1e7b960f120'
 export const jolocomIpfsHost = 'https://ipfs.jolocom.com:443'
 
 export function getRegistry(providerUrl: string = infura, contractAddress: string = jolocomContract, ipfsHost: string = jolocomIpfsHost) {
-  const registryContract = new EthereumResolver(contractAddress, providerUrl)
+  const registryContract = new RegistryContract(contractAddress, providerUrl)
   const ipfs = new IpfsStorageAgent(ipfsHost)
   return {
     commitDidDoc: async (privateKeyHex: string, didDocument: IDidDocument, publicProfile?: any): Promise<IDidDocument> => {
@@ -32,7 +32,7 @@ export function getRegistry(providerUrl: string = infura, contractAddress: strin
 
       const documentHash = await ipfs.storeJSON(didDocument)
 
-      await registryContract.updateDIDRecord(Buffer.from(privateKeyHex, 'hex'), didDocument.id, documentHash)
+      await registryContract.updateDID(Buffer.from(privateKeyHex, 'hex'), didDocument.id, documentHash)
       return didDocument
     }
   }
