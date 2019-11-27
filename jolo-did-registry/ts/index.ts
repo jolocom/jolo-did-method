@@ -1,4 +1,4 @@
-import RegistryContract from "jolocom-registry-contract/js";
+import RegistryContract from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "./ipfs";
 import { IDidDocument } from "@decentralized-identity/did-common-typescript"
 

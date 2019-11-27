@@ -15,7 +15,7 @@ export function getResolver(providerUri: string = PROVIDER_URI, contractAddress:
     parsed: ParsedDID,
     didResolver: Resolver
   ): Promise<DIDDocument | null> {
-    const ipfsHash = await registryContract.resolveDID(parsed.id);
+    const ipfsHash = await registryContract.resolveDID(did);
 
     return (await ipfsAgent.catJSON(ipfsHash)) as DIDDocument
   }

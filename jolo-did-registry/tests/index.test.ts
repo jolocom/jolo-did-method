@@ -1,5 +1,5 @@
 import { getRegistry } from "../ts";
-import EthereumResolver from "jolocom-registry-contract";
+import RegistryContract from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 import { didDocument, didDocumentWithPublicProfile, privateKey, publicProfile } from "./test.data";
 
@@ -13,8 +13,8 @@ describe("DID Registry", () => {
 
   beforeEach(() => {
     contractMock = jest
-      .spyOn(EthereumResolver.prototype, "updateDIDRecord")
-      .mockResolvedValue("");
+      .spyOn(RegistryContract.prototype, "updateDID")
+      .mockResolvedValue();
     ipfsMock = jest
       .spyOn(IpfsStorageAgent.prototype, "storeJSON")
       .mockResolvedValueOnce("firstCall")
