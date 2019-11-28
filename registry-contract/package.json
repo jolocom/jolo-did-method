@@ -1,10 +1,10 @@
 {
   "name": "jolocom-registry-contract",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Basic contract for registering DID / DID Document mappings",
   "main": "js",
   "typings": "js",
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "git@github.com:jolocom/jolo-did-method.git",
     "directory": "registry-contract"
@@ -19,7 +19,10 @@
     "js",
     "build"
   ],
-  "contributors": ["Eugeniu Rusu", "Volker Schiewe"],
+  "contributors": [
+    "Eugeniu Rusu",
+    "Volker Schiewe"
+  ],
   "dependencies": {
     "ethers": "^4.0.39"
   },
