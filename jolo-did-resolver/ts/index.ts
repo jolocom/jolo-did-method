@@ -23,7 +23,15 @@ export function getResolver(providerUri: string = PROVIDER_URI, contractAddress:
   return { "jolo": resolve }
 }
 
-export async function getPublicProfile(ipfsHash: string, ipfsHost: string): Promise<any> {
-  const ipfsAgent = new  IpfsStorageAgent(ipfsHost)
-  return ipfsAgent.catJSON(ipfsHash)
+export async function getPublicProfile(didDoc: DIDDocument, ipfsHost: string = IPFS_ENDPOINT): Promise<any | null> {
+  const ipfsAgent = new IpfsStorageAgent(ipfsHost);
+
+  const publicProfileSection = didDoc?.service?.find(
+    endpoint => endpoint.type === 'JolocomPublicProfile',
+  );
+
+  if (publicProfileSection?.serviceEndpoint) {
+    const hash = publicProfileSection.serviceEndpoint.replace('ipfs://', '');
+    return ipfsAgent.catJSON(hash)
+  }
 }
