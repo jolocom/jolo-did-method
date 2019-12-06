@@ -1,0 +1,14 @@
+{
+  "name": "jolocom-did-driver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jolocom/jolocom-did-driver.git",
+  "author": "Charles Cunningham <charles.cunningham@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.4",
+    "jolocom-lib": "^2.2.4",
+    "jolocom-registry-contract": "^0.1.7"
+  }
+}
