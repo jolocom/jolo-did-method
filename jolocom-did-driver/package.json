@@ -2,7 +2,7 @@
   "name": "jolocom-did-driver",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/jolocom/jolocom-did-driver.git",
+  "repository": "https://github.com/jolocom/jolo-did-method.git",
   "author": "Charles Cunningham <charles.cunningham@outlook.com>",
   "license": "MIT",
   "private": false,
