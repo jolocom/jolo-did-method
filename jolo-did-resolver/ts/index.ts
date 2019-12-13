@@ -17,7 +17,9 @@ export function getResolver(providerUri: string = PROVIDER_URI, contractAddress:
   ): Promise<DIDDocument | null> {
     const ipfsHash = await ethereumConnector.resolveDID(parsed.id);
 
-    return (await ipfsAgent.catJSON(ipfsHash)) as DIDDocument
+    if (ipfsHash)
+      return (await ipfsAgent.catJSON(ipfsHash)) as DIDDocument;
+    return null
   }
 
   return { "jolo": resolve }

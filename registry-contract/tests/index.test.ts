@@ -17,6 +17,11 @@ describe('Ethereum Resolver', () => {
     ganacheServer.close()
   })
 
+  it('Should return empty string if no record exists', async () => {
+    const hash = await ethResolver.resolveDID(testData.testUserDID)
+    expect(hash).toBe('')
+  })
+
   it('Should correctly register a user\'s DDO hash', async () => {
     const ethereumKey = Buffer.from(testData.firstKey, 'hex')
     await ethResolver.updateDIDRecord(
@@ -28,7 +33,7 @@ describe('Ethereum Resolver', () => {
     expect(hash).toEqual(testData.mockDDOHash)
   })
 
-  it('Should return error in case writting record fails', async () => {
+  it('Should return error in case writing record fails', async () => {
     const ethereumKey = Buffer.from(testData.secondKey, 'hex')
 
     await expect(ethResolver.updateDIDRecord(

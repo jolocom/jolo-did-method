@@ -6,7 +6,7 @@ import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe("DID Resolver", () => {
   let ethereumMock;
-  beforeAll(() => {
+  beforeEach(() => {
     ethereumMock = jest
       .spyOn(EthereumResolver.prototype, "resolveDID")
       .mockResolvedValue("testHash");
@@ -35,6 +35,15 @@ describe("DID Resolver", () => {
       const resolver = new Resolver(joloResolver);
 
       await expect(resolver.resolve("did:jolo:notHex")).rejects.toThrow();
+    });
+
+    it('should return null if DID is not registered', async () => {
+      ethereumMock.mockResolvedValue('');
+      const joloResolver = getResolver();
+      const resolver = new Resolver(joloResolver);
+
+      const didDoc = await resolver.resolve('did:jolo:notRegistered')
+      expect(didDoc).toBe(null)
     });
   });
 
