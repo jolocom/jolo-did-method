@@ -16,6 +16,11 @@ describe('Registry Contract', () => {
     ganacheServer.close()
   })
 
+  it('Should return empty string if no record exists', async () => {
+    const hash = await registryContract.resolveDID(testData.testUserDID)
+    expect(hash).toBe('')
+  })
+
   it('Should correctly register a user\'s DDO hash', async () => {
     const privateKey = Buffer.from(testData.firstKey, 'hex')
     await registryContract.updateDID(
@@ -27,7 +32,7 @@ describe('Registry Contract', () => {
     expect(hash).toEqual(testData.mockDDOHash)
   })
 
-  it('Should return error in case writting record fails', async () => {
+  it('Should return error in case writing record fails', async () => {
     const privateKey = Buffer.from(testData.secondKey, 'hex')
 
     await expect(registryContract.updateDID(
