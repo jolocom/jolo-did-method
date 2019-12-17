@@ -13,7 +13,7 @@
   "scripts": {
     "prepare": "tsc",
     "clean": "rm -rf js node_modules",
-    "test": "truffle compile && jest --forceExit",
+    "test": "truffle compile && jest",
     "deploy:testnet": "truffle deploy --network rinkeby"
   },
   "files": [

@@ -1,14 +1,14 @@
 import { getPublicProfile, getResolver } from "../ts";
 import { Resolver } from "did-resolver";
 import { testDid, testDidDoc, testDidDocWithPublicProfile } from "./test.data";
-import EthereumResolver from "jolocom-registry-contract";
+import RegistryContract from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe("DID Resolver", () => {
   let ethereumMock;
   beforeEach(() => {
     ethereumMock = jest
-      .spyOn(EthereumResolver.prototype, "resolveDID")
+      .spyOn(RegistryContract.prototype, "resolveDID")
       .mockResolvedValue("testHash");
     jest
       .spyOn(IpfsStorageAgent.prototype, "catJSON")
