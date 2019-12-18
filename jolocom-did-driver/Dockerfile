@@ -5,7 +5,9 @@ WORKDIR /usr/src/app
 
 # Only copy the package.json and yarn.lock to work directory
 COPY package.json .
-COPY yarn.lock .
+
+# lockfile is only available in root dir of monorepo, unresolved issue in yarn workspaces: https://github.com/yarnpkg/yarn/issues/5428
+# COPY yarn.lock .
 
 # Install all Packages
 RUN yarn install
