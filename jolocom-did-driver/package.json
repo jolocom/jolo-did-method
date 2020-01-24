@@ -19,7 +19,7 @@
   "dependencies": {
     "did-resolver": "^1.1.0",
     "express": "^4.16.4",
-    "jolo-did-resolver": "^0.1.2"
+    "jolo-did-resolver": "^0.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
