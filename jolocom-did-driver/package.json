@@ -1,6 +1,6 @@
 {
   "name": "jolocom-did-driver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "js/index.js",
   "repository": "https://github.com/jolocom/jolo-did-method.git",
   "author": "Charles Cunningham <charles.cunningham@outlook.com>",
