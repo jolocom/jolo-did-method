@@ -17,8 +17,10 @@ export function getResolver(providerUri: string = PROVIDER_URI, contractAddress:
   ): Promise<DIDDocument | null> {
     const ipfsHash = await registryContract.resolveDID(did);
 
-    if (ipfsHash)
+    if (ipfsHash) {
       return (await ipfsAgent.catJSON(ipfsHash)) as DIDDocument;
+    }
+
     return null
   }
 
@@ -37,3 +39,4 @@ export async function getPublicProfile(didDoc: DIDDocument, ipfsHost: string = I
     return ipfsAgent.catJSON(hash)
   }
 }
+
