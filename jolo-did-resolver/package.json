@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "detect-node": "^2.0.4",
-    "did-resolver": "^1.1.0",
+    "did-resolver": "2.0.0",
     "node-fetch": "^2.6.0",
     "jolocom-registry-contract": "0.3.0"
   }

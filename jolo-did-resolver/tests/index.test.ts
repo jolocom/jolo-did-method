@@ -6,6 +6,7 @@ import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe("DID Resolver", () => {
   let ethereumMock;
+
   beforeEach(() => {
     ethereumMock = jest
       .spyOn(RegistryContract.prototype, "resolveDID")
@@ -14,12 +15,10 @@ describe("DID Resolver", () => {
       .spyOn(IpfsStorageAgent.prototype, "catJSON")
       .mockResolvedValue(testDidDoc);
   });
+
   describe("getResolver", () => {
     it("should resolve jolo DID", async () => {
       const joloResolver = getResolver(
-        "etherumConnector",
-        "0xD4351c3f383d79bA378ed1875275b1E7b960f120",
-        "http:test:8000"
       );
       const resolver = new Resolver(joloResolver);
       const didDoc = await resolver.resolve(testDid);
@@ -38,12 +37,11 @@ describe("DID Resolver", () => {
     });
 
     it('should return null if DID is not registered', async () => {
-      ethereumMock.mockResolvedValue('');
-      const joloResolver = getResolver();
-      const resolver = new Resolver(joloResolver);
+      ethereumMock.mockResolvedValue(undefined);
 
-      const didDoc = await resolver.resolve('did:jolo:notRegistered')
-      expect(didDoc).toBe(null)
+      const resolver = new Resolver(getResolver());
+
+      await expect(resolver.resolve('')).rejects.toThrow('Missing DID');
     });
   });
 
