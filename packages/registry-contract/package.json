@@ -1,6 +1,6 @@
 {
   "name": "jolocom-registry-contract",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Basic contract for registering DID / DID Document mappings",
   "license": "MIT",
   "main": "js",
@@ -25,16 +25,15 @@
     "Volker Schiewe"
   ],
   "dependencies": {
-    "ethers": "^4.0.40"
+    "ethers": "^5.0.8"
   },
   "devDependencies": {
-    "@truffle/hdwallet-provider": "^1.0.26",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "dotenv": "^8.2.0",
-    "ganache-core": "^2.8.0",
+    "ganache-core": "^2.5.7",
     "jest": "^24.9.0",
-    "truffle": "^5.1.2",
+    "truffle": "^5.1.14-nodeLTS.0",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.2"

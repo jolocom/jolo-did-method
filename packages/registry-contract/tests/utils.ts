@@ -1,5 +1,5 @@
 import testData from "./testData";
-import { ethers } from "ethers";
+import { ethers, Contract } from "ethers";
 const RegistryContract = require('../build/contracts/Registry.json')
 
 const ganache = require('ganache-core')
@@ -15,16 +15,17 @@ export function startGanache() {
       { secretKey: '0x' + testData.secondKey, balance, },
     ],
   })
+
   server.listen(PORT, (err, blockchain) => blockchain)
   return server
 }
 
-export async function deployIdentityContract(): Promise<string> {
-  console.log('Deploying Test Contract')
+export async function deployIdentityContract(): Promise<Contract> {
   let provider = new ethers.providers.JsonRpcProvider(ganacheUri)
-  let wallet = new ethers.Wallet(testData.firstKey, provider)
+  let wallet = new ethers.Wallet(Buffer.from(
+    testData.firstKey, 'hex'
+  ), provider)
+
   let factory = new ethers.ContractFactory(RegistryContract.abi, RegistryContract.bytecode, wallet)
-  let contract = (await factory.deploy());
-  await contract.deployed()
-  return contract.address
+  return factory.deploy()
 }
