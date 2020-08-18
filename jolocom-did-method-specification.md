@@ -7,7 +7,7 @@ Ethereum is a public permissionless blockchain and smart contract execution envi
 ### IPFS
 IPFS is a distributed, cryptographic Content-Addressable Storage (CAS) network. IPFS enables distributed storage of content over a network with the content being addressable via its hash. An important concept to note is that if data changes, so does it's address.
 ## Overview
-The Jolocom DID method uses IPFS as a decentralised CAS layer for DID Documents. A deployed smart contract provides a mapping from a DID to an IPFS hash address of the corrosponding DID Document. This enables DID Documents on IPFS to be effectively addressed via their DIDs. 
+The Jolocom DID method uses IPFS as a decentralised CAS layer for DID Documents. A deployed smart contract (see [1]) provides a mapping from a DID to an IPFS hash address of the corrosponding DID Document. This enables DID Documents on IPFS to be effectively addressed via their DIDs. 
 ## Specification
 ### Method DID Format
 Jolocom DIDs are identifiable by their did\:jolo: method string and conform to the [Generic DID Scheme](https://w3c-ccg.github.io/did-spec/#the-generic-did-scheme).
@@ -35,3 +35,5 @@ As mentioned in the Key Recovery section, the entity which controls the private 
 The DID Document anchored with the registry contract can contain any content, though it is recommended that it conforms to the [W3C DID Document Specificaiton](https://w3c-ccg.github.io/did-spec/#did-documents). As registered DIDs can be resolved by anyone, care should be taken to only update the registry to resolve to DID Documents which DO NOT expose any sensitive personal information, or information which you may not wish to be public.
 ### IPFS and Cannonicity
 IPFS allows any entity to store content publically. A common misconception is that anyone can edit content, however the content-addressability of the platform means that this new content will have a different address to the original. Thus while any entity can copy and modify an anchored DID Document, they cannot change the document that a DID resolves to via the registry smartcontract unless they control the private key which anchored it.
+## References
+ **[1]** <https://github.com/jolocom/jolo-did-method/blob/master/registry-contract/contracts/Registry.sol>
