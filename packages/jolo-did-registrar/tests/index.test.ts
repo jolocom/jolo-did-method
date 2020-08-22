@@ -1,4 +1,4 @@
-import { getRegistry } from "../ts";
+import { getRegistrar } from "../ts";
 import RegistryContract from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 import { didDocument, publicProfile, publicKey, mockSignature, testEncodedUnsignedTx } from "./test.data";
@@ -7,10 +7,10 @@ import { didDocument, publicProfile, publicKey, mockSignature, testEncodedUnsign
 describe("DID Registry", () => {
   let contractMock, ipfsMock;
 
-  let registry: ReturnType<typeof getRegistry>;
+  let registry: ReturnType<typeof getRegistrar>;
 
   beforeAll(()=>{
-    registry = getRegistry();
+    registry = getRegistrar();
   })
 
   beforeEach(() => {

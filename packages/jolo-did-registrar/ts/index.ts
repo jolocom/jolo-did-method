@@ -7,7 +7,7 @@ export const infura =  'https://rinkeby.infura.io/v3/64fa85ca0b28483ea90919a8363
 export const jolocomContract = '0xd4351c3f383d79ba378ed1875275b1e7b960f120'
 export const jolocomIpfsHost = 'https://ipfs.jolocom.com:443'
 
-export function getRegistry(providerUrl: string = infura, contractAddress: string = jolocomContract, ipfsHost: string = jolocomIpfsHost) {
+export function getRegistrar(providerUrl: string = infura, contractAddress: string = jolocomContract, ipfsHost: string = jolocomIpfsHost) {
   const registryContract = new RegistryContract(contractAddress, providerUrl)
   const ipfs = new IpfsStorageAgent(ipfsHost)
 
