@@ -1,6 +1,6 @@
 {
-  "name": "jolo-did-registry",
-  "version": "0.2.0",
+  "name": "@jolocom/jolo-did-registrar",
+  "version": "1.0.0-rc.0",
   "main": "js",
   "types": "js",
   "license": "MIT",
