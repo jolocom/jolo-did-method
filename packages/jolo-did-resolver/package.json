@@ -15,6 +15,7 @@
   ],
   "devDependencies": {
     "@types/jest": "^24.0.23",
+    "@types/node": "^14.6.0",
     "did-resolver": "2.0.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
@@ -22,7 +23,7 @@
   },
   "dependencies": {
     "detect-node": "^2.0.4",
-    "jolocom-registry-contract": "^0.5.0",
+    "jolocom-registry-contract": "^0.5.1",
     "node-fetch": "^2.6.0"
   }
 }

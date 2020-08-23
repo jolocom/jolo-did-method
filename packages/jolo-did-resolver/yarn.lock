@@ -734,6 +734,11 @@
   dependencies:
     jest-diff "^24.3.0"
 
+"@types/node@^14.6.0":
+  version "14.6.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.6.0.tgz#7d4411bf5157339337d7cff864d9ff45f177b499"
+  integrity sha512-mikldZQitV94akrc4sCcSjtJfsTKt4p+e/s0AGscVA6XArQ9kFclP+ZiYUMnq987rc6QlYxXv/EivqlfSLxpKA==
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -2385,10 +2390,10 @@ jest@^24.9.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
-jolocom-registry-contract@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/jolocom-registry-contract/-/jolocom-registry-contract-0.5.0.tgz#fb1acb2e596b1fc1f741199e2ec5c16f7ba09118"
-  integrity sha512-f9MsxBT9oJEBX2df7U8V2Rc39bNgBJKZhAjXDUdyIHb/6x8BooN5Zb6W1EGwG9wrnY10oJ/ypShRPY7s8dupZw==
+jolocom-registry-contract@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/jolocom-registry-contract/-/jolocom-registry-contract-0.5.1.tgz#aab1c833c6ce4f507b9db98a82549f7028075fd4"
+  integrity sha512-PfPVHCmMt0z1LJSRK/74Q/nAeFa+3JC3s1hxi06j2e5mJ6yyTOpuJubd5CwtovdoKhrUr61GyN3au/vgxpDghA==
   dependencies:
     ethers "^5.0.8"
 
