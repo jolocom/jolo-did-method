@@ -682,10 +682,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@jolocom/registry-contract@^1.0.0-rc3":
-  version "1.0.0-rc3"
-  resolved "https://registry.yarnpkg.com/@jolocom/registry-contract/-/registry-contract-1.0.0-rc3.tgz#381a1a8985b053969484ee8e4c7a6de48620f07e"
-  integrity sha512-81YPKGYwNkDpx/tWmrwc+XGKuXV6wyVKg1XImlbz5N2raPW8vB9vVTtoHS3Bays1gG4TubLGjLm0ifAvD4GNhg==
+"@jolocom/registry-contract@1.0.0-rc4":
+  version "1.0.0-rc4"
+  resolved "https://registry.yarnpkg.com/@jolocom/registry-contract/-/registry-contract-1.0.0-rc4.tgz#ac1ae9543cb3d1a99872340f0fcfce7a33bc27c0"
+  integrity sha512-miNhdIQN8iOt03G9xuLm+BHCZJ1fYNYpUm1pNN3BK4B8fk3YMWRTO/LVcUwieWQ9v0w0iFKNJaI0En75le6B8g==
   dependencies:
     ethers "^5.0.8"
 
