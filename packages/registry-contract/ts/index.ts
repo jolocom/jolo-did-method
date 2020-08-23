@@ -1,8 +1,6 @@
-import { Contract, ethers, UnsignedTransaction } from "ethers";
-import { utils } from "ethers";
-import { BaseProvider } from "ethers/providers";
-import { Signature } from "ethers/utils";
+import { Contract, ethers, UnsignedTransaction, utils, Signature } from "ethers";
 import { keccak256 } from "ethers/lib/utils";
+import { BaseProvider } from "@ethersproject/providers";
 
 const contractABI = require('../build/contracts/Registry.json')
 
@@ -63,8 +61,8 @@ export default class RegistryContract {
     hash: string,
     pubKey: Buffer,
      { gasPrice, gasLimit } = {
-      gasPrice: '0xb2d05e005',
-      gasLimit: '0x7a120' 
+      gasPrice: '0x4e3b29200',
+      gasLimit: '0x493e0'
     }): Promise<Buffer> {
 
     const idString = stripMethodPrefix(did)
