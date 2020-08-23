@@ -1,6 +1,6 @@
 {
-  "name": "jolocom-registry-contract",
-  "version": "0.5.1",
+  "name": "@jolocom/registry-contract",
+  "version": "1.0.0-rc3",
   "description": "Basic contract for registering DID / DID Document mappings",
   "license": "MIT",
   "main": "js",
