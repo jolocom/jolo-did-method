@@ -1,6 +1,6 @@
 {
   "name": "@jolocom/jolo-did-resolver",
-  "version": "1.0.0-rc.0.1",
+  "version": "1.0.0-rc2",
   "main": "js",
   "types": "js",
   "license": "MIT",
