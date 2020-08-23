@@ -1,3 +1,4 @@
+import { Signature } from "ethers"
 import RegistryContract from "jolocom-registry-contract";
 import { IpfsStorageAgent } from "./ipfs";
 import { IDidDocument } from "@decentralized-identity/did-common-typescript"
@@ -20,7 +21,7 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
         .then(txBuffer => '0x' + txBuffer.toString('hex'))
     },
 
-    broadcastTransaction: async (transactionHex: string, signature: {r: string, s: string, recoveryParam: number}) => {
+    broadcastTransaction: async (transactionHex: string, signature: Signature) => {
       return registryContract.broadcastTransaction(transactionHex, signature)
     },
 
