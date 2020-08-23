@@ -1,5 +1,5 @@
 import { DIDDocument, ParsedDID, Resolver } from "did-resolver";
-import RegistryContract from "jolocom-registry-contract";
+import RegistryContract from "@jolocom/registry-contract";
 import { IpfsStorageAgent } from "./ipfs";
 
 const CONTRACT_ADDRESS = '0xd4351c3f383d79ba378ed1875275b1e7b960f120';

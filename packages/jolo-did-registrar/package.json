@@ -1,6 +1,6 @@
 {
   "name": "@jolocom/jolo-did-registrar",
-  "version": "1.0.0-rc2",
+  "version": "1.0.0-rc3",
   "main": "js",
   "types": "js",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "js"
   ],
   "dependencies": {
+    "@jolocom/registry-contract": "^1.0.0-rc3",
     "detect-node": "^2.0.4",
     "form-data": "^3.0.0",
-    "jolocom-registry-contract": "^0.5.1",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {

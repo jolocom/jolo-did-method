@@ -682,6 +682,13 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@jolocom/registry-contract@^1.0.0-rc3":
+  version "1.0.0-rc3"
+  resolved "https://registry.yarnpkg.com/@jolocom/registry-contract/-/registry-contract-1.0.0-rc3.tgz#381a1a8985b053969484ee8e4c7a6de48620f07e"
+  integrity sha512-81YPKGYwNkDpx/tWmrwc+XGKuXV6wyVKg1XImlbz5N2raPW8vB9vVTtoHS3Bays1gG4TubLGjLm0ifAvD4GNhg==
+  dependencies:
+    ethers "^5.0.8"
+
 "@types/babel__core@^7.1.0":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
@@ -2423,13 +2430,6 @@ jest@^24.9.0:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
-
-jolocom-registry-contract@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/jolocom-registry-contract/-/jolocom-registry-contract-0.5.1.tgz#aab1c833c6ce4f507b9db98a82549f7028075fd4"
-  integrity sha512-PfPVHCmMt0z1LJSRK/74Q/nAeFa+3JC3s1hxi06j2e5mJ6yyTOpuJubd5CwtovdoKhrUr61GyN3au/vgxpDghA==
-  dependencies:
-    ethers "^5.0.8"
 
 js-sha3@0.5.7:
   version "0.5.7"
