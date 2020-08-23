@@ -1,8 +1,14 @@
-import { Contract, ethers, UnsignedTransaction, utils, Signature } from "ethers";
+import { Contract, ethers, UnsignedTransaction, utils } from "ethers";
 import { keccak256 } from "ethers/lib/utils";
 import { BaseProvider } from "@ethersproject/providers";
 
 const contractABI = require('../build/contracts/Registry.json')
+
+export type SignatureLike = {
+  r: string;
+  s: string;
+  recoveryParam?: number;
+}
 
 export default class RegistryContract {
   private readonly provider: BaseProvider
@@ -32,7 +38,7 @@ export default class RegistryContract {
    * @param did - the user's DID
    * @param didDocumentHash - IPFS hash of the related DID Document
    */
-  async broadcastTransaction(tx: string, sig: Signature) {
+  async broadcastTransaction(tx: string, sig: SignatureLike) {
     if (sig.r.length !== 66) {
       throw new Error(`Invalid R length, expected 32 bytes, got ${sig.r.length}`)
     }
@@ -89,7 +95,7 @@ export default class RegistryContract {
 
   async sendRawTransaction(txData: string | {
     unsignedTx: UnsignedTransaction,
-    signature: Signature
+    signature: SignatureLike
   }) {
     if (typeof txData === 'string') {
       return this.provider.sendTransaction(txData)
