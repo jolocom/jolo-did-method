@@ -53,7 +53,7 @@ export default class RegistryContract {
 
     return this.provider.sendTransaction(
       utils.serializeTransaction(utils.parseTransaction(tx), sig)
-    )
+    ).then(tx => tx.wait())
   }
 
   /**
@@ -101,11 +101,9 @@ export default class RegistryContract {
       return this.provider.sendTransaction(txData)
     }
 
-    const tx = this.provider.sendTransaction(
+    return this.provider.sendTransaction(
       utils.serializeTransaction(txData.unsignedTx, txData.signature)
-    )
-
-    return tx.then(res => res.wait())
+    ).then(res => res.wait())
   }
 }
 

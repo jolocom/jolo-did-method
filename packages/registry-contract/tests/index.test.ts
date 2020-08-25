@@ -33,7 +33,7 @@ describe('Registry Contract', () => {
 
     const rawTx = await new Wallet(privateKey).signTransaction(parseTransaction(tx))
 
-    await registryContract.sendRawTransaction(rawTx).then(tx => tx.wait())
+    await registryContract.sendRawTransaction(rawTx)
 
     return expect(
       await registryContract.resolveDID(testData.testUserDID)
