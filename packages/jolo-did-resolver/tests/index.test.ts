@@ -1,7 +1,7 @@
 import { getPublicProfile, getResolver } from "../ts";
 import { Resolver } from "did-resolver";
 import { testDid, testDidDoc, testDidDocWithPublicProfile } from "./test.data";
-import RegistryContract from "jolocom-registry-contract";
+import RegistryContract from "@jolocom/registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 
 describe("DID Resolver", () => {

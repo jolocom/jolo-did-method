@@ -17,9 +17,9 @@
     "test": "echo 'No tests yet'"
   },
   "dependencies": {
+    "@jolocom/jolo-did-resolver": "^1.0.0-rc5",
     "did-resolver": "^1.1.0",
-    "express": "^4.16.4",
-    "jolo-did-resolver": "^0.2.0"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",

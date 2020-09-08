@@ -1,5 +1,5 @@
 import { getRegistrar } from "../ts";
-import RegistryContract from "jolocom-registry-contract";
+import RegistryContract from "@jolocom/registry-contract";
 import { IpfsStorageAgent } from "../ts/ipfs";
 import { didDocument, publicProfile, publicKey, mockSignature, testEncodedUnsignedTx } from "./test.data";
 
@@ -16,7 +16,8 @@ describe("DID Registry", () => {
   beforeEach(() => {
     contractMock = jest
       .spyOn(RegistryContract.prototype, "broadcastTransaction")
-      .mockResolvedValue({ status: 1 });
+      //@ts-ignore Stubbed return type is not a valid Transaction TS Type
+      .mockResolvedValue({ from: "", data: "", status: 1});
 
     ipfsMock = jest
       .spyOn(IpfsStorageAgent.prototype, "storeJSON")

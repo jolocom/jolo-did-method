@@ -11,5 +11,6 @@
     "clean": "yarn workspaces run clean && rm -rf node_modules",
     "test": "yarn workspaces run test"
   },
-  "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"]
+  "workspaces": ["./packages/jolo-did-resolver", "./packages/jolo-did-registrar", "./packages/registry-contract"]
 }
+

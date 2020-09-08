@@ -1,5 +1,5 @@
 import express from "express"
-import { getResolver } from "jolo-did-resolver";
+import { getResolver } from "@jolocom/jolo-did-resolver";
 import { Resolver } from "did-resolver";
 
 const PORT = 8080;
