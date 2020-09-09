@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "outDir": "js",
+    "rootDir": "ts"
+  },
+  "exclude": [
+    "tests",
+    "js"
+  ]
+}

@@ -7,9 +7,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "yarn workspaces run prepare",
+    "install": "yarn workspaces run",
+    "prepare": "yarn prepare:resolver; yarn prepare:registrar; yarn prepare:registry",
+    "prepare:resolver": "yarn --cwd './packages/jolo-did-resolver' prepare",
+    "prepare:registrar": "yarn --cwd './packages/jolo-did-registrar' prepare",
+    "prepare:registry": "yarn --cwd './packages/registry-contract' prepare",
     "clean": "yarn workspaces run clean && rm -rf node_modules",
     "test": "yarn workspaces run test"
   },
-  "workspaces": ["registry-contract", "jolo-did-registry", "jolo-did-resolver"]
+  "workspaces": ["./packages/jolo-did-resolver", "./packages/jolo-did-registrar", "./packages/registry-contract"]
 }
+

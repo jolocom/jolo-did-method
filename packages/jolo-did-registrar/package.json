@@ -1,0 +1,32 @@
+{
+  "name": "@jolocom/jolo-did-registrar",
+  "version": "1.0.0-rc5",
+  "main": "js",
+  "types": "js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc",
+    "clean": "rm -rf js node_modules",
+    "test": "jest"
+  },
+  "files": [
+    "js"
+  ],
+  "dependencies": {
+    "@jolocom/registry-contract": "^1.0.0-rc5",
+    "detect-node": "^2.0.4",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@decentralized-identity/did-common-typescript": "^0.1.19",
+    "@types/detect-node": "^2.0.0",
+    "@types/form-data": "^2.5.0",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^14.6.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  }
+}

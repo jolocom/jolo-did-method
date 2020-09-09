@@ -2,6 +2,7 @@
 node_modules
 js
 */**/yarn-error.log
+./yarn.lock
 
 coverage
 *.tgz

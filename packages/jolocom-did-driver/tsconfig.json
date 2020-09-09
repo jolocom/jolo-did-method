@@ -1,0 +1,12 @@
+{
+  "extends:": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "js",
+    "esModuleInterop": true,
+    "lib": ["es2015"]
+
+  },
+  "exclude": [
+    "js"
+  ]
+}

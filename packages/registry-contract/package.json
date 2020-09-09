@@ -1,0 +1,41 @@
+{
+  "name": "@jolocom/registry-contract",
+  "version": "1.0.0-rc6",
+  "description": "Basic contract for registering DID / DID Document mappings",
+  "license": "MIT",
+  "main": "js",
+  "typings": "js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jolocom/jolo-did-method.git",
+    "directory": "registry-contract"
+  },
+  "scripts": {
+    "prepare": "tsc",
+    "clean": "rm -rf js node_modules",
+    "test": "truffle compile && jest",
+    "deploy:testnet": "truffle deploy --network rinkeby"
+  },
+  "files": [
+    "js",
+    "build"
+  ],
+  "contributors": [
+    "Eugeniu Rusu",
+    "Volker Schiewe"
+  ],
+  "dependencies": {
+    "ethers": "5.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "dotenv": "^8.2.0",
+    "ganache-core": "^2.5.7",
+    "jest": "^24.9.0",
+    "truffle": "^5.1.14-nodeLTS.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
+  }
+}
