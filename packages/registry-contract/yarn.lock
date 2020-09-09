@@ -825,11 +825,6 @@
     typedarray-to-buffer "^3.1.5"
     yaeti "^0.0.6"
 
-"@zoltu/ethereum-abi-encoder@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@zoltu/ethereum-abi-encoder/-/ethereum-abi-encoder-5.0.2.tgz#ba053dc86dc3be4df3136f573738a3d688fcc5e8"
-  integrity sha512-NgBph0y1Lnmfncr3lAysFV2M13fUfVwfGrxwpSDvwRvxJ7QIcFKcwA32j4Z/PM9UP0MIPRH6A01JGShCkCDONw==
-
 abab@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.4.tgz#6dfa57b417ca06d21b2478f0e638302f99c2405c"
@@ -3684,11 +3679,6 @@ fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fastestsmallesttextencoderdecoder@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/fastestsmallesttextencoderdecoder/-/fastestsmallesttextencoderdecoder-1.0.22.tgz#59b47e7b965f45258629cc6c127bf783281c5e93"
-  integrity sha512-Pb8d48e+oIuY4MaM64Cd7OW1gt4nxCHs7/ddPPZ/Ic3sg8yVGM7O9wDvZ7us6ScaUupzM+pfBolwtYhN1IxBIw==
 
 fb-watchman@^2.0.0:
   version "2.0.1"

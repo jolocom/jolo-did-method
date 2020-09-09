@@ -7,7 +7,9 @@ describe("IPFS Agent", () => {
 
   it("should store json on ipfs", () => {
     const ipfs = new IpfsStorageAgent("host");
-    ipfs.fetchImplementation = jest.fn();
+    ipfs.fetchImplementation = jest.fn().mockResolvedValue({json: () => ({
+      Hash: "QM"
+    })});
     ipfs.storeJSON({ data: "data" });
     expect(ipfs.fetchImplementation.mock.calls[0]).toMatchInlineSnapshot(`
       Array [
