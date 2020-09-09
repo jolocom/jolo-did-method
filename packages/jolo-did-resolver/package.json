@@ -5,7 +5,7 @@
   "types": "js",
   "license": "MIT",
   "scripts": {
-    "prepare": "tsc",
+    "prepare": "tsc -p ./tsconfig.json",
     "clean": "rm -rf js node_modules",
     "test": "jest",
     "build": "tsc"
