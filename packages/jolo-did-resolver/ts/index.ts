@@ -8,9 +8,9 @@ const IPFS_ENDPOINT = 'https://ipfs.jolocom.com:443'
 
 /**
  * Returns a configured resolver for the did:jolo method
- * @param providerUri - Ethereum HTTP gateway to use for reading the registry contract state and broadcasting transactions
+ * @param providerUri - Ethereum HTTP gateway used for reading the registry contract state and broadcasting transactions
  * @param contractAddress - The Ethereum address of a instance of the registry smart contract to use for anchoring / resolution
- * @param ipfsHost - IPFS gateway HTTPS API endpoint used for storing / reading IPFS documents, should allow for pinning.
+ * @param ipfsHost - IPFS gateway HTTPS API endpoint used for storing / reading IPFS documents
  */
 
 export function getResolver(providerUri: string = PROVIDER_URI, contractAddress: string = CONTRACT_ADDRESS, ipfsHost: string = IPFS_ENDPOINT) {

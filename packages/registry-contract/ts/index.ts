@@ -25,7 +25,7 @@ export default class RegistryContract {
    *
    * @param did -  the DID that should be resolved
    * @returns The IPFS hash if an entry exists for the given DID
-   * @throws if the DID does not have a "jolo" method string or if no entry exists
+   * @throws if the DID does not have a "jolo" method identifier or if no Did Document was found
    * @example registryContract.resolveDID("did:jolo:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2")
    */
   async resolveDID(did: string): Promise<string> {
@@ -64,14 +64,16 @@ export default class RegistryContract {
   }
 
   /**
-    * Returns an unsigned, RLP encoded, serialized, Etereum TX. The returned
-    * Once the transaction is signed, the RegistryContract.broadcastTransaction method can be called to update the
-    * entry in the registry.
+    * Returns an unsigned, RLP encoded, serialized, Etereum TX.
+    * Once the transaction is signed, the RegistryContract.broadcastTransaction
+    * method can be called to update the entry in the registry smart contract.
+    *
     * @param did - the DID to be anchored, e.g. did:jolo:accf...eed
     * @param hash - the IPFS hash for the corresponding DID Document
     * @param pubKey - the public key of the intended signer. It is used to fetch the latest nonce (for
     * the associated Ethereum dddress) and encode it in the TX
     * @param gasConfiguration - optional configuration for the gasPrice and gasLimit to be encoded in the TX
+    *
     * @returns Buffer containing an unsigned RLP encoded call to the `update` function on the registry smart contract.
     */
 
