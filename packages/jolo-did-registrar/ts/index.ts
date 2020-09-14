@@ -22,7 +22,7 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
 
     /**
      * Returns an unsigned, RLP encoded, serialized, Etereum TX.
-     * Once the transaction is signed, it can be broadcasted to the network to be
+     * Once the transaction is signed, it can be broadcast to the network to be
      * processed by the registry smart contract.
      *
      * @param pubKey - the public key of the future transaction signer. This is required
@@ -55,7 +55,7 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
     },
 
     /**
-     * Given a DID and a "Public Profile" JSON object, the function will attemtp to publish the Public Profile document
+     * Given a DID and a "Public Profile" JSON object, the function will attempt to publish the Public Profile document
      * to IPFS, and return a "ServiceEndpoint" section with the corresponding IPFS hash included
      * @see https://jolocom-lib.readthedocs.io/en/latest/publicProfile.html
      *
