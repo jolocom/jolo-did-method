@@ -2,6 +2,8 @@
 This module encapsulates the logic required to resolve Jolocom Identities using an instance of the Jolocom [registry smart contract](../registry-contract) and an IPFS gateway.
 The exported interface is compatible with the [DIF DID-Resolver](https://github.com/decentralized-identity/did-resolver) module.
 
+*Please note that this module is not meant to be used directly, but rather through an integration with either the Jolocom Library ([source](https://github.com/jolocom/jolocom-lib/blob/next/ts/didMethods/jolo/resolver.ts#L31)), or the DIF DID-Resolver module (as shown in the example below)*
+
 ## Usage examples
 In combination with the [DIF DID-Resolver](https://github.com/decentralized-identity/did-resolver):
 
@@ -35,5 +37,3 @@ const didDocument = await resolver.resolve(did);
 ```
 
 If no arguments are passed to the `getResolver()` function, [default arguments are used](https://github.com/jolocom/jolo-did-method/blob/master/packages/jolo-did-resolver/ts/index.ts#L5).
-
-*This module is also [integrated with the Jolocom Library](https://github.com/jolocom/jolocom-lib/blob/next/ts/didMethods/jolo/resolver.ts#L31) for `did:jolo` resolution*

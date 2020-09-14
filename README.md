@@ -1,6 +1,6 @@
 # Jolocom DID Method
 This workspace includes the `did:jolo` [DID method specification](./packages/jolocom-did-method-specification.md),
-as well as implementations for compliant, Ethereum / IPFS based, resolver and registrar classes.
+as well as implementations for compliant, Ethereum / IPFS based, resolver and registrar modules.
 
 # Contents:
 The [packages](./packages/) directory contains the following modules:
