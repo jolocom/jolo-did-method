@@ -16,7 +16,7 @@
     "@jolocom/registry-contract": "^1.0.0-rc5",
     "detect-node": "^2.0.4",
     "form-data": "^3.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@decentralized-identity/did-common-typescript": "^0.1.19",
