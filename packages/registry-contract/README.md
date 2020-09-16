@@ -1,4 +1,4 @@
 # RegistryContract
-A basic smart contract on top of the Ethereum network that registers mappings between DID and IPFS DDO hashes.
+The repository contains the source code for the Ethereum smart contract used as part of our `did:jolo` [method spec](../jolocom-did-method-specification.md) implementation. The project also includes a configured [truffle](https://github.com/trufflesuite/truffle) environment for compiling, testing and deploying the contract, and a wrapper class allowing for easier integration.
 
-Further information / reasoning can be found [here](https://github.com/jolocom/jolocom-lib/issues/15). 
+*This is a lower level module used by the jolo-did-registrar ([integration](https://github.com/jolocom/jolo-did-method/blob/master/packages/jolo-did-registrar/ts/index.ts#L11)) and jolo-did-resolver ([integration](https://github.com/jolocom/jolo-did-method/blob/master/packages/jolo-did-resolver/ts/index.ts#L10)) packages to offer a more consumable API.*
