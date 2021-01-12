@@ -14,6 +14,7 @@ RUN yarn install
 
 # Copy all other source code to work directory
 ADD . /usr/src/app
+RUN yarn build
 
 CMD [ "yarn", "server" ]
 EXPOSE 8080

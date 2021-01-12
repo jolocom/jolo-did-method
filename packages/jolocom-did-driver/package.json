@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "start": "ts-node index.ts",
-    "prepare": "tsc",
+    "build": "tsc",
     "clean": "rm -rf js node_modules",
     "server": "yarn prepare && node js/index.js",
     "test": "echo 'No tests yet'"
