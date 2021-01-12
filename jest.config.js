@@ -6,5 +6,9 @@ module.exports = {
     ],
     transform: {
         "^.+\\.tsx?$": "ts-jest"
+    },
+    globals: {
+      Uint8Array: Uint8Array,
+      ArrayBuffer: ArrayBuffer
     }
 };
