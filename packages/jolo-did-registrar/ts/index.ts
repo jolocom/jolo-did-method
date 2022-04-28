@@ -1,4 +1,4 @@
-import RegistryContract, { SignatureLike } from "@jolocom/registry-contract";
+import RegistryContract, { SignatureLike, GasOptions } from "@jolocom/registry-contract";
 import { IpfsStorageAgent } from "./ipfs";
 import { IDidDocument } from "@decentralized-identity/did-common-typescript"
 
@@ -28,13 +28,17 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
      * @param pubKey - the public key of the future transaction signer. This is required
      * to fetch the latest corresponding Ethereum transaction nonce, and assemble a valid transaction
      * @param didDocument - the Did Document to store on IPFS
+     * @param gasConfiguration - optional configuration for the gasPrice and gasLimit to be encoded in the TX
      * @returns Unsigned, hex encoded, RLP encoded contract call. Can be signed using a secp256k1 key.
      */
 
-    publishDidDocument: async (pubKey: Buffer, didDocument: IDidDocument): Promise<string> => {
+    publishDidDocument: async (pubKey: Buffer, didDocument: IDidDocument, gasOptions: GasOptions = {
+      gasLimit: 300000,
+      gasPrice: 45e9 // 45 GWEI
+    }): Promise<string> => {
       const documentHash = await ipfs.storeJSON(didDocument)
 
-      return registryContract.prepareAnchoringTransaction(didDocument.id, documentHash, pubKey)
+      return registryContract.prepareAnchoringTransaction(didDocument.id, documentHash, pubKey, gasOptions)
         .then(txBuffer => '0x' + txBuffer.toString('hex'))
     },
 

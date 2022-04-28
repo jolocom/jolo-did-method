@@ -3,6 +3,12 @@ import { BaseProvider } from "@ethersproject/providers";
 
 const contractABI = require('../build/contracts/Registry.json')
 
+// Gas Price expected in WEI, base10
+export type GasOptions = {
+  gasPrice: number
+  gasLimit: number,
+}
+
 export type SignatureLike = {
   r: string;
   s: string;
@@ -72,7 +78,7 @@ export default class RegistryContract {
     * @param hash - the IPFS hash for the corresponding DID Document
     * @param pubKey - the public key of the intended signer. It is used to fetch the latest nonce (for
     * the associated Ethereum dddress) and encode it in the TX
-    * @param gasConfiguration - optional configuration for the gasPrice and gasLimit to be encoded in the TX
+    * @param gasConfiguration - configuration for the gasPrice and gasLimit to be encoded in the TX
     *
     * @returns Buffer containing an unsigned RLP encoded call to the `update` function on the registry smart contract.
     */
@@ -81,10 +87,8 @@ export default class RegistryContract {
     did: string,
     hash: string,
     pubKey: Buffer,
-     { gasPrice, gasLimit } = {
-      gasPrice: '0x4e3b29200',
-      gasLimit: '0x493e0'
-    }): Promise<Buffer> {
+    {gasLimit, gasPrice}: GasOptions,
+    ): Promise<Buffer> {
 
     const idString = stripMethodPrefix(did)
     const nonce = await this.provider.getTransactionCount(
@@ -96,8 +100,8 @@ export default class RegistryContract {
       hash,
       {
         nonce,
-        gasLimit,
-        gasPrice,
+        gasLimit: `0x${gasLimit.toString(16)}`,
+        gasPrice: `0x${gasPrice.toString(16)}`,
         value: '0x00',
       }
     ).then(tx => Buffer.from(utils.serializeTransaction(tx).slice(2), 'hex'))
