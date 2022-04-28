@@ -119,13 +119,15 @@ export default class RegistryContract {
       .setRecord(idString, hash, {
         nonce,
         type: 2,
-        chainId: 4,
         maxFeePerGas,
         maxPriorityFeePerGas,
         gasLimit: '0x493e0',
         value: '0x00'
       })
-      .then(tx => Buffer.from(utils.serializeTransaction(tx).slice(2), 'hex'));
+      .then(tx => {
+	tx.chainId = 4
+        return Buffer.from(utils.serializeTransaction(tx).slice(2), 'hex')
+      });
   }
 
   /**
