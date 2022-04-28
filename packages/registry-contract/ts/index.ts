@@ -119,6 +119,7 @@ export default class RegistryContract {
       .setRecord(idString, hash, {
         nonce,
         type: 2,
+        chainId: 4,
         maxFeePerGas,
         maxPriorityFeePerGas,
         gasLimit: '0x493e0',
