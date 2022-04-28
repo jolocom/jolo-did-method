@@ -22,7 +22,7 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
-    "@jolocom/registry-contract": "^1.0.0",
+    "@jolocom/registry-contract": "^1.0.1",
     "detect-node": "^2.0.4",
     "node-fetch": "^2.6.1"
   }
