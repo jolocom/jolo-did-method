@@ -25,7 +25,7 @@
     "Volker Schiewe"
   ],
   "dependencies": {
-    "ethers": "5.0.5"
+    "ethers": "5.6.4"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
