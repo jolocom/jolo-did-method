@@ -24,6 +24,6 @@
   "dependencies": {
     "@jolocom/registry-contract": "1.0.4",
     "detect-node": "^2.0.4",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   }
 }
