@@ -9,10 +9,10 @@ import { BaseProvider } from '@ethersproject/providers';
 
 const contractABI = require('../build/contracts/Registry.json');
 
-// Gas Price expected in WEI, base10
+// Eip1559 FeeData
 export type GasOptions = {
-  maxFeePerGas?: number;
-  maxPriorityFeePerGas?: number;
+  maxFeePerGas?: BigNumber;
+  maxPriorityFeePerGas?: BigNumber;
 };
 
 export type SignatureLike = {
