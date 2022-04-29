@@ -1,9 +1,13 @@
-import RegistryContract, { SignatureLike } from "@jolocom/registry-contract";
-import { IpfsStorageAgent } from "./ipfs";
-import { IDidDocument } from "@decentralized-identity/did-common-typescript"
+import RegistryContract, {
+  SignatureLike,
+  GasOptions
+} from '@jolocom/registry-contract'
+import { IpfsStorageAgent } from './ipfs'
+import { IDidDocument } from '@decentralized-identity/did-common-typescript'
 
-const JOLOCOM_PUBLIC_PROFILE_TYPE = "JolocomPublicProfile"
-export const infura =  'https://rinkeby.infura.io/v3/64fa85ca0b28483ea90919a83630d5d8'
+const JOLOCOM_PUBLIC_PROFILE_TYPE = 'JolocomPublicProfile'
+export const infura =
+  'https://rinkeby.infura.io/v3/64fa85ca0b28483ea90919a83630d5d8'
 export const jolocomContract = '0xd4351c3f383d79ba378ed1875275b1e7b960f120'
 export const jolocomIpfsHost = 'https://ipfs.jolocom.com:443'
 
@@ -14,12 +18,15 @@ export const jolocomIpfsHost = 'https://ipfs.jolocom.com:443'
  * @param ipfsHost - IPFS gateway HTTPS API endpoint used for storing / reading IPFS documents, should allow for pinning
  */
 
-export function getRegistrar(providerUrl: string = infura, contractAddress: string = jolocomContract, ipfsHost: string = jolocomIpfsHost) {
+export function getRegistrar(
+  providerUrl: string = infura,
+  contractAddress: string = jolocomContract,
+  ipfsHost: string = jolocomIpfsHost
+) {
   const registryContract = new RegistryContract(contractAddress, providerUrl)
   const ipfs = new IpfsStorageAgent(ipfsHost)
 
   return {
-
     /**
      * Returns an unsigned, RLP encoded, serialized, Etereum TX.
      * Once the transaction is signed, it can be broadcast to the network to be
@@ -28,29 +35,43 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
      * @param pubKey - the public key of the future transaction signer. This is required
      * to fetch the latest corresponding Ethereum transaction nonce, and assemble a valid transaction
      * @param didDocument - the Did Document to store on IPFS
+     * @param gasConfiguration - optional configuration for the gasPrice and gasLimit to be encoded in the TX
      * @returns Unsigned, hex encoded, RLP encoded contract call. Can be signed using a secp256k1 key.
      */
 
-    publishDidDocument: async (pubKey: Buffer, didDocument: IDidDocument): Promise<string> => {
+    publishDidDocument: async (
+      pubKey: Buffer,
+      didDocument: IDidDocument,
+      feeData?: GasOptions
+    ): Promise<string> => {
       const documentHash = await ipfs.storeJSON(didDocument)
 
-      return registryContract.prepareAnchoringTransaction(didDocument.id, documentHash, pubKey)
+      return registryContract
+        .prepareAnchoringTransaction(
+          didDocument.id,
+          documentHash,
+          pubKey,
+          feeData
+        )
         .then(txBuffer => '0x' + txBuffer.toString('hex'))
     },
 
     /**
      * Given an unsigned, hex encoded Ethereum transaction (e.g. as created by `publishDidDocument`)
-     * and a {@link SignatureLike} object (containing the R, S, and V values for the corresponding signature), will 
+     * and a {@link SignatureLike} object (containing the R, S, and V values for the corresponding signature), will
      * assemble / encode the signed transaction and broadcast it to the Ethereum network,
      * then wait for the transaction to be mined, and return the result.
      * @see https://docs.ethers.io/v5/api/utils/bytes/#utils-splitSignature
      *
      * @param transactionHex - RLP encoded Ethereum transaction (e.g. as created by `publishDidDocument`)
-     * @param signature - Object containing the hex encoded values for R and S, and a 0 / 1 value vor V. 
+     * @param signature - Object containing the hex encoded values for R and S, and a 0 / 1 value vor V.
      * @returns TransactionReceipt containing the status of the TX, gas used, # of confirmations, etc.
      */
 
-    broadcastTransaction: async (transactionHex: string, signature: SignatureLike) => {
+    broadcastTransaction: async (
+      transactionHex: string,
+      signature: SignatureLike
+    ) => {
       return registryContract.broadcastTransaction(transactionHex, signature)
     },
 
@@ -67,12 +88,17 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
      * The returned section can be included in a DID Document to make the public profile discoverable.
      */
 
-    publishPublicProfile: async (did: string, publicProfile: any): Promise<ReturnType<typeof generatePublicProfileServiceSection>> => {
-      return generatePublicProfileServiceSection(did, await ipfs.storeJSON(publicProfile))
+    publishPublicProfile: async (
+      did: string,
+      publicProfile: any
+    ): Promise<ReturnType<typeof generatePublicProfileServiceSection>> => {
+      return generatePublicProfileServiceSection(
+        did,
+        await ipfs.storeJSON(publicProfile)
+      )
     }
   }
 }
-
 
 /**
  * @internal
@@ -90,12 +116,12 @@ export function getRegistrar(providerUrl: string = infura, contractAddress: stri
 
 function generatePublicProfileServiceSection(
   did: string,
-  profileIpfsHash: string,
+  profileIpfsHash: string
 ) {
   return {
-    id: `${ did };jolocomPubProfile`,
-    serviceEndpoint: `ipfs://${ profileIpfsHash }`,
+    id: `${did};jolocomPubProfile`,
+    serviceEndpoint: `ipfs://${profileIpfsHash}`,
     description: 'Verifiable Credential describing entity profile',
-    type: JOLOCOM_PUBLIC_PROFILE_TYPE,
+    type: JOLOCOM_PUBLIC_PROFILE_TYPE
   }
 }

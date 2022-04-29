@@ -1,6 +1,6 @@
 {
   "name": "@jolocom/jolo-did-resolver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "js",
   "types": "js",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
-    "@jolocom/registry-contract": "^1.0.0",
+    "@jolocom/registry-contract": "1.0.4",
     "detect-node": "^2.0.4",
     "node-fetch": "^2.6.1"
   }
